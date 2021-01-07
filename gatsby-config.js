@@ -3,20 +3,20 @@ module.exports = {
     title: "comedorinfantilmdepaz",
   },
   plugins: [
-    {
-      resolve: "gatsby-source-contentful",
-      options: {
-        accessToken: "T4EgX2h13x4m6uVEMT6Zg_VIMwO6nMYZhYqcxuvb6OA",
-        spaceId: "pEuJrUxiaAcw3Oo0hvATX4VbQsulgWeAagDo3EWxUk8",
-      },
-    },
+    // {
+    //   resolve: "gatsby-source-contentful",
+    //   options: {
+    //     accessToken: "T4EgX2h13x4m6uVEMT6Zg_VIMwO6nMYZhYqcxuvb6OA",
+    //     spaceId: "pEuJrUxiaAcw3Oo0hvATX4VbQsulgWeAagDo3EWxUk8",
+    //   },
+    // },
     "gatsby-plugin-sass",
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "",
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-google-analytics",
+    //   options: {
+    //     trackingId: "",
+    //   },
+    // },
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-offline",
