@@ -1,5 +1,7 @@
-import React, { Component, useState } from "react"
-import ProgramasCard from "./ProgramasCard";
+import React, { Component, useState } from "react";
+import Layout from "../components/layout";
+import Head from "../components/head";
+import ProgramasCard from "../components/ProgramasCard";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 
@@ -40,6 +42,8 @@ function Programas() {
   Main page - contains title and description for each section.
   */}
   return (
+    <Layout>
+    <Head title="Programas" />
     <div className="container mt-5">
       <h1 className="display-4">Programas</h1>
       <p className="lead">A lo largo de nuestra experiencia, tenemos en marcha distintos programas, proyectos y campañas, logrando enfocar nuestros esfuerzos y apoyo a quienes más lo necesitan.</p>
@@ -61,6 +65,7 @@ function Programas() {
       }
       </div>
     </div>
+    </Layout>
   );
 }
 
