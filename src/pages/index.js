@@ -9,6 +9,7 @@ const IndexPage = () => {
         <Head title="Home"/>
         <h1 style={{marginTop: "10%", textAlign: "center"}}>HOME</h1>
       </Layout>
+
   )
 }
 
