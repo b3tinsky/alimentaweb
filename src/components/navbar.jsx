@@ -50,7 +50,7 @@ class Navbar extends Component {
               <Link className={navStyles.listLink} to="/">Lugar2</Link>
             </li>
             <li>
-              <Link className={navStyles.listLink} to="/">Lugar3</Link>
+              <Link className={navStyles.listLink} to="/Programas">Programas</Link>
             </li>
             <li>
               <Link className={navStyles.listLink} to="/">Lugar4</Link>
