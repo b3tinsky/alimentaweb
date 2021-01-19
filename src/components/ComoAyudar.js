@@ -55,7 +55,7 @@ function ComoAyudar() {
         <div className="col col-sm-12 col-md-6" style={styles}>
         {
           manerasAyudar.map(maneraAyudar => (
-            <ComoAyudarCard id={maneraAyudar.id} title={maneraAyudar.title} description = {maneraAyudar.description} images = {programa.images}/>
+            <ComoAyudarCard id={maneraAyudar.id} title={maneraAyudar.title} description = {maneraAyudar.description} images = {maneraAyudar.images}/>
           ))
           }
         </div>
