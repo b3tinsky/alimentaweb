@@ -28,7 +28,7 @@ function Contacto() {
           <strong>Escríbenos por WhatsApp</strong>
           <p>
             <Link to="https://wa.me/message/AQESZAPMHK7WJ1" target="_blank">
-              <Image width="64px" height="64px" style={{padding: "7px"}} src={require('C:/Users/Raul/Desktop/whatsapp-logo-1.png')} />
+              <Image width="64px" height="64px" style={{padding: "7px"}} src={require('../images/contacto/whatsapp-logo-1.png')} />
             </Link>
             <Link to="https://wa.me/message/AQESZAPMHK7WJ1" target="_blank">
               https://wa.me/message/AQESZAPMHK7WJ1
@@ -38,7 +38,7 @@ function Contacto() {
           <strong>Contáctanos por Messenger</strong>
           <p>
             <Link to="http://m.me/esperanzaaldebil" target="_blank">
-              <Image width="64px" height="64px" style={{padding: "3px"}} src={require('C:/Users/Raul/Desktop/Messenger-BRC-10.19.2020/Downloadable Assets/Logo/P3/logo-1024.png')} />
+              <Image width="64px" height="64px" style={{padding: "3px"}} src={require('../images/contacto/messenger-logo-1024.png')} />
             </Link>
             <Link to="http://m.me/esperanzaaldebil" target="_blank">
               https://m.me/esperanzaaldebil
