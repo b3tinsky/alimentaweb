@@ -1,31 +1,12 @@
-import React, { Component, useState } from "react"
+import React from "react"
 import Layout from "../components/layout";
 import Head from "../components/head"
 import Card from 'react-bootstrap/Card'
-import CardDeck from 'react-bootstrap/CardDeck'
 import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
 import { Link } from "gatsby";
 
-function SobreNosotros() {
-  const [cards, setCards] = useState([
-    {
-      title: "Misión",
-      body: ["Implementar programas de desarrollo social y emocional en la niñez, mejorando la calidad de vida de los niños, combatiendo el hambre y a su vez, promoviendo y fortaleciendo los valores, la inclusión y la unidad familiar en todos los tejidos sociales."]
-    },
-    {
-      title: "Visión",
-      body: [
-        "Lograr una niñez plena y feliz a través de la integración familiar, el desarrollo y fortalecimiento de las capacidades de cada niño, proveyendo herramientas necesarias para enfrentar el futuro de manera exitosa.",
-        "Valores: Respeto, Honestidad, Paz, Responsabilidad, Compromiso, Solidaridad, Compasión, Empatía y Amor."
-      ],
-    },
-    {
-      title: "Valores",
-      body: ["Creemos que el respeto y la honestidad son la columna vertebral para forjar la paz en nuestra sociedad, así mismo, con empatía, responsabilidad, compromiso y solidaridad se puede lograr que niños y jóvenes crezcan siendo hombres y mujeres de bien con amor hacia su prójimo replicando lo que ellos han aprendido."]
-    },
-  ]);
-
+function Contacto() {
 
   return(
     <Layout>
@@ -78,4 +59,4 @@ function SobreNosotros() {
   )
 }
 
-export default SobreNosotros;
+export default Contacto;
