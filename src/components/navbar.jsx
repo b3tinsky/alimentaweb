@@ -43,17 +43,20 @@ class Navbar extends Component {
           </div>
           <Link className={navStyles.logo} to="/">Esperanza al Debil</Link>
           <ul className={open ? navStyles.showing : ""}>
-            <li>
-              <Link className={navStyles.listLink} to="/SobreNosotros">Sobre Nosotros</Link>
+          <li>
+              <Link className={navStyles.listLink} to="/">Inicio</Link>
             </li>
             <li>
-              <Link className={navStyles.listLink} to="/">Lugar2</Link>
+              <Link className={navStyles.listLink} to="/SobreNosotros">Sobre Nosotros</Link>
             </li>
             <li>
               <Link className={navStyles.listLink} to="/Programas">Programas</Link>
             </li>
             <li>
-              <Link className={navStyles.listLink} to="/">Lugar4</Link>
+              <Link className={navStyles.listLink} to="/Comedores">Comedores</Link>
+            </li>
+            <li>
+              <Link className={navStyles.listLink} to="/ComoAyudar">Cómo Ayudar</Link>
             </li>
           </ul>
       </nav>

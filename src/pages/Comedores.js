@@ -1,5 +1,7 @@
 import React, { Component, useState } from "react"
-import ComedoresCard from "./ComedoresCard";
+import ComedoresCard from "../components/ComedoresCard";
+import Layout from "../components/layout";
+import Head from "../components/head";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 
@@ -29,27 +31,30 @@ function Comedores() {
   Main page - contains title and description for each section.
   */}
   return (
-    <div className="container my-5">
-      <h1 className="display-4">Comedores</h1>
-      {/* <p className="lead">Optional description for this section</p> */}
-      <div class="row justify-content-center">
-      {
-       comedores.map(comedor => (
-         <ComedoresCard 
-         id={comedor.id} 
-         title={comedor.title} 
-         description = {comedor.description} 
-         images = {comedor.images}
-         kids = {comedor.kids}
-         adultos = {comedor.adultos}
-         abuelitos = {comedor.abuelitos}
-         discapacitados = {comedor.discapacitados}
-        />
-       ))
-      }
-      <img src={require('../images/comedores/0c0.png')} class="img-fluid" alt="Ellos te necesitan"></img>
+    <Layout>
+      <Head title="Comedores" />
+      <div className="container my-5">
+        <h1 className="display-4">Comedores</h1>
+        {/* <p className="lead">Optional description for this section</p> */}
+        <div class="row justify-content-center">
+        {
+        comedores.map(comedor => (
+          <ComedoresCard 
+          id={comedor.id} 
+          title={comedor.title} 
+          description = {comedor.description} 
+          images = {comedor.images}
+          kids = {comedor.kids}
+          adultos = {comedor.adultos}
+          abuelitos = {comedor.abuelitos}
+          discapacitados = {comedor.discapacitados}
+          />
+        ))
+        }
+        <img src={require('../images/comedores/0c0.png')} class="img-fluid" alt="Ellos te necesitan"></img>
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 }
 
