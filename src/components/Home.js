@@ -86,11 +86,13 @@ function Home() {
     <Layout>
     <Head title="Comedor Infantil Mensajero de Paz" />
     <div className="container mt-5">
-      <div className="text-center">
-        <Image src={require('../images/home/logo-esperanza-al-debil.png')} />
-        <h1 className="display-4"><strong>Siembra hoy en los niños, cosecha mañana un mundo transformado</strong></h1>
+      <div className="row justify-content-center align-items-center mb-4">
+        <Image className="col-8 col-md-6 col-lg-4 mx-lg-auto" src={require('../images/home/logo-esperanza-al-debil.png')} />
+
+        <iframe className="col-12 col-md-10 col-lg-7 col-xl-6" width="560" height="315" src="https://www.youtube.com/embed/jet92W6kEJI"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-      <br />
+      <h1 className="display-4 text-center"><strong>Siembra hoy en los niños, cosecha mañana un mundo transformado</strong></h1>
       <hr />
 
       <h1 className="display-5 pb-3">{secciones[0].title}</h1>
