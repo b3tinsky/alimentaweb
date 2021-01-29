@@ -13,12 +13,13 @@ function Contacto() {
     <Head title="Contacto" />
     <div className="container mt-5">
       <h1 className="display-4">Contacto</h1>
-      <p className="lead">Eugenio Aguirre Benavides 4813 64170 Monterrey, N.L., México</p>
+      <p className="lead">Comedor Infantil Mensajero de Paz<br />
+      Calle Cesena 5311, Valle de Santa Cecilia, 64150 Monterrey, N.L., México</p>
       
       <div class="row justify-content-center">
         
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.437784117092!2d-100.36176758497992!3d25.723032383654388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866296866aaa9285%3A0x8ed76d743e789718!2sEugenio%20Benavides%204813%2C%20Marvel%2C%2064170%20Monterrey%2C%20N.L.!5e0!3m2!1ses-419!2smx!4v1611300992348!5m2!1ses-419!2smx" 
-          width="600" height="450" frameborder="0"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe title="Ubicación en Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.368805710248!2d-100.36691358497978!3d25.725314583653265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866297b8123fb51b%3A0x2cab3c0a0dc0fece!2sComedor%20Infantil%20Mensajero%20de%20Paz!5e0!3m2!1ses-419!2smx!4v1611898702545!5m2!1ses-419!2smx"
+          width="600" height="450" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         
         <Card className="col-lg-9 col-xl-5 mx-lg-auto ml-xl-auto mr-xl-0 my-2 py-4">
           
