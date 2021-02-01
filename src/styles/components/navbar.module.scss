@@ -5,14 +5,12 @@
   color: rgb(0, 0, 0);
   font-weight: normal;
   font-size: 30px;
-  font-family: 'Roboto';
-
     &:hover {
         color:rgb(70, 70, 70);
     }
 }
   .black  {
-  background: rgb(20, 231, 125);
+  background: rgb(2, 117, 216);
   transition: .5s;
   }
 
@@ -42,10 +40,8 @@ nav {
       padding: 20px;
       .listLink {
         text-decoration: none;
-        color: rgb(0, 0, 0);
+        color: #292b2c;
         font-size: 20px;
-        font-family: 'Roboto';
-        font-weight: bold;
         &:hover {
           color: rgb(87, 87, 87);
         }
@@ -154,5 +150,5 @@ nav {
 
 ::-webkit-scrollbar-thumb 
 {
-    background: rgb(0, 245, 212);
+    background: rgb(2, 117, 216);
 }
