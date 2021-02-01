@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
 import navStyles from "../styles/components/navbar.module.scss";
-import { faTerminal } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class Navbar extends Component {
   state = {
@@ -39,13 +39,10 @@ class Navbar extends Component {
       <nav className={scrolled ? navStyles.black : navStyles.transparent}>
           <div className={navStyles.menuIcon}>
             
-          <FontAwesomeIcon icon={faTerminal} transform="down-7 grow-2.5" onClick={this.handleClick}/>
+          <FontAwesomeIcon icon={faBars} onClick={this.handleClick}/>
           </div>
           <Link className={navStyles.logo} to="/">Esperanza al Debil</Link>
           <ul className={open ? navStyles.showing : ""}>
-          <li>
-              <Link className={navStyles.listLink} to="/">Inicio</Link>
-            </li>
             <li>
               <Link className={navStyles.listLink} to="/SobreNosotros">Sobre Nosotros</Link>
             </li>
@@ -57,6 +54,9 @@ class Navbar extends Component {
             </li>
             <li>
               <Link className={navStyles.listLink} to="/ComoAyudar">Cómo Ayudar</Link>
+            </li>
+            <li>
+              <Link className={navStyles.listLink} to="/Galeria">Galeria</Link>
             </li>
             <li>
               <Link className={navStyles.listLink} to="/Contacto">Contacto</Link>
