@@ -2,8 +2,6 @@ import React, { Component, useState } from "react"
 import ComedoresCard from "../components/ComedoresCard";
 import Layout from "../components/layout";
 import Head from "../components/head";
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.js';
 
 function Comedores() {
   {/**

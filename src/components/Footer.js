@@ -1,6 +1,4 @@
 import React, { Component, useState } from "react"
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.js';
 
 function Footer() {
   return (

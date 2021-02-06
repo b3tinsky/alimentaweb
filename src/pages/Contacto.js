@@ -5,6 +5,9 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
 import { Link } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagramSquare, faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
+import contactStyles from "../styles/pages/Contacto.module.scss";
 
 function Contacto() {
 
@@ -50,11 +53,15 @@ function Contacto() {
           <p><a href="mailto:info@comedorinfantilmdepaz.org">info@comedorinfantilmdepaz.org</a></p>
           <div>
             <Button variant="primary" href="mailto:info@comedorinfantilmdepaz.org">Envíanos un correo</Button>
-          </div>
-          
+            <Link to="https://www.facebook.com/comedormensajerodepaz" target="_blank">
+              <FontAwesomeIcon icon={faFacebookSquare} size="3x" transform="down-5" className={contactStyles.socialIcon}/>
+            </Link>
+            <Link to="https://www.instagram.com/comedorinfantilmensajero/" target="_blank">
+              <FontAwesomeIcon icon={faInstagramSquare} size="3x" transform="down-5" className={contactStyles.socialIcon}/>
+            </Link>
+          </div>          
         </Card>
       </div>
-      
     </div>
     </Layout>
   )
