@@ -41,7 +41,7 @@ class Navbar extends Component {
             
           <FontAwesomeIcon icon={faBars} onClick={this.handleClick}/>
           </div>
-          <Link className={navStyles.logo} to="/">Esperanza al Debil</Link>
+          <Link className={navStyles.logo} to="/">Esperanza al Débil</Link>
           <ul className={open ? navStyles.showing : ""}>
             <li>
               <Link className={navStyles.listLink} to="/SobreNosotros">Sobre Nosotros</Link>

@@ -29,7 +29,7 @@ function Home() {
         {
           img: "peopleicon.png",
           title: "+4,000 Personas Beneficiadas",
-        },
+        }
       ]
     },
     {
@@ -198,25 +198,16 @@ function Home() {
 
         <Card>
           <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey="1">
-              PayPal
+            <Accordion.Toggle as={Button} variant="link" href="https://www.paypal.com/donate?token=-rFsLiXyuFvB3GDNoZx0NQbTHX7Wl5xmEVYWu-yGKl2aSz_SJdWhXdMvfIp2QY9KKapgZN48__a_bYq7" target="_blank" eventKey="1">
+              <Card.Img src={require('../images/home/paypal logo.png')}/>
             </Accordion.Toggle>
           </Card.Header>
-          <Accordion.Collapse eventKey="1">
-            <Card.Body>
-              <form action="https://www.paypal.com/donate" method="post" target="_blank">
-                <input type="hidden" name="hosted_button_id" value="KQKYAVXP9XYSY" />
-                <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                <img alt="" border="0" src="https://www.paypal.com/es_MX/i/scr/pixel.gif" width="1" height="1" />
-              </form>
-            </Card.Body>
-          </Accordion.Collapse>
         </Card>
 
         <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" href="https://www.moneypool.mx/p/ey3FWEY#" target="_blank" eventKey="2">
-              Moneypool
+            <Card.Img src={require('../images/home/moneypool logo.png')}/>
             </Accordion.Toggle>
           </Card.Header>
         </Card>
