@@ -16,11 +16,11 @@ function Home() {
       cards: [
         {
           img: "despensaicono.png",
-          title: "1085 Despensas Familiares",
+          title: "+1,500 Despensas Familiares",
         },
         {
           img: "appleicon.png",
-          title: "+1,800 Apoyos Alimentarios",
+          title: "+4,500 Apoyos Alimentarios",
         },
         {
           img: "familyicon.png",
@@ -28,7 +28,7 @@ function Home() {
         },
         {
           img: "peopleicon.png",
-          title: "+4,000 Personas Beneficiadas",
+          title: "+6,000 Personas Beneficiadas",
         }
       ]
     },
