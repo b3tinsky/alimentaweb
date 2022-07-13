@@ -186,8 +186,11 @@ function Home() {
           <Accordion.Collapse eventKey="0">
             <Card.Body className="row justify-content-center">
                 <div className="col-12 col-sm-5 col-lg-4 mx-auto py-3 border-0">
-                  <p className="lead"><strong>Número de cuenta:</strong><br />5204 1601 7400 3090</p>
+                  <p className="lead"><strong>Número de cuenta:</strong><br />194119917</p>
+                  <p className="lead"><strong>Clabe:</strong><br />062580 001941 199171</p>
                   <p className="lead"><strong>Referencia:</strong><br />Alimenta una familia</p>
+                  <h5><strong>También puedes depositar en Oxxo</strong></h5>
+                  <p className="lead"><strong>Depositos a tarjeta de débito:</strong><br/> 4320 4901 0098 9779</p>
                 </div>
             </Card.Body>
           </Accordion.Collapse>
@@ -196,7 +199,7 @@ function Home() {
         <Card>
           <Card.Header>
             {/* Modificar link de paypal y moneypool */}
-            <Accordion.Toggle as={Button} variant="link" href="https://www.paypal.com/donate?token=-rFsLiXyuFvB3GDNoZx0NQbTHX7Wl5xmEVYWu-yGKl2aSz_SJdWhXdMvfIp2QY9KKapgZN48__a_bYq7" target="_blank" eventKey="1">
+            <Accordion.Toggle as={Button} variant="link" href="https://www.paypal.com/paypalme/comedorinfantil" target="_blank" eventKey="1">
               <Card.Img src={require('../images/home/paypal logo.png')}/>
             </Accordion.Toggle>
           </Card.Header>
@@ -204,7 +207,7 @@ function Home() {
 
         <Card>
           <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" href="https://www.moneypool.mx/p/ey3FWEY#" target="_blank" eventKey="2">
+            <Accordion.Toggle as={Button} variant="link" href="https://www.moneypool.mx/p/yAW1A2k" target="_blank" eventKey="2">
             <Card.Img src={require('../images/home/moneypool logo.png')}/>
             </Accordion.Toggle>
           </Card.Header>
