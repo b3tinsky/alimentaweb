@@ -180,7 +180,7 @@ function Home() {
         <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="0">
-              Deposita a nuestra cuenta bancaria
+              <h3>Deposita a nuestra cuenta bancaria</h3>
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="0">
@@ -188,16 +188,14 @@ function Home() {
                 <div className="col-12 col-sm-5 col-lg-4 mx-auto py-3 border-0">
                   <p className="lead"><strong>Número de cuenta:</strong><br />5204 1601 7400 3090</p>
                   <p className="lead"><strong>Referencia:</strong><br />Alimenta una familia</p>
-                  <p className="lead">O escanea nuestro código QR</p>
                 </div>
-
-                <Card.Img className="col-7 col-md-5 col-lg-4 mx-auto" src={require('../images/home/qr_citibanamex.jpg')} />
             </Card.Body>
           </Accordion.Collapse>
         </Card>
 
         <Card>
           <Card.Header>
+            {/* Modificar link de paypal y moneypool */}
             <Accordion.Toggle as={Button} variant="link" href="https://www.paypal.com/donate?token=-rFsLiXyuFvB3GDNoZx0NQbTHX7Wl5xmEVYWu-yGKl2aSz_SJdWhXdMvfIp2QY9KKapgZN48__a_bYq7" target="_blank" eventKey="1">
               <Card.Img src={require('../images/home/paypal logo.png')}/>
             </Accordion.Toggle>
