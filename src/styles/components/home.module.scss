@@ -2,6 +2,7 @@ body .homeButtons {
     border-radius: 1rem;
     font-weight: 700;
     font-size: 1rem;
+    width: 10rem;
     padding: {
         top: 0.75rem;
         bottom: 0.75rem;
@@ -14,4 +15,9 @@ body .homeButtons {
     flex-direction: row;
     justify-content: space-evenly !important;
     margin: 2rem;
+}
+
+.firstSectionLeft {
+    display: flex;
+    flex-direction: column;
 }
