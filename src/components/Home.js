@@ -7,7 +7,7 @@ import Image from "react-bootstrap/Image";
 import { Card, CardDeck } from "react-bootstrap";
 import { Button, ButtonToolbar } from "react-bootstrap";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
-import { secciones, accordionTestimonios } from "./Textos";
+import { secciones, accordionTestimonios } from "./TextosHome";
 import homeStyles from "../styles/components/home.module.scss";
 
 function Home() {
@@ -159,7 +159,7 @@ function Home() {
                                 as={Button}
                                 variant="link"
                                 eventKey="0">
-                                Deposita a nuestra cuenta bancaria
+                                <h3>Deposita a nuestra cuenta bancaria</h3>
                             </Accordion.Toggle>
                         </Card.Header>
                         <Accordion.Collapse eventKey="0">
@@ -168,38 +168,43 @@ function Home() {
                                     <p className="lead">
                                         <strong>Número de cuenta:</strong>
                                         <br />
-                                        5204 1601 7400 3090
+                                        194119917
+                                    </p>
+                                    <p className="lead">
+                                        <strong>Clabe:</strong>
+                                        <br />
+                                        062580 001941 199171
                                     </p>
                                     <p className="lead">
                                         <strong>Referencia:</strong>
                                         <br />
                                         Alimenta una familia
                                     </p>
+                                    <h5>
+                                        <strong>
+                                            También puedes depositar en Oxxo
+                                        </strong>
+                                    </h5>
                                     <p className="lead">
-                                        O escanea nuestro código QR
+                                        <strong>
+                                            Depositos a tarjeta de débito:
+                                        </strong>
+                                        <br /> 4320 4901 0098 9779
                                     </p>
                                 </div>
-
-                                <Card.Img
-                                    className="col-7 col-md-5 col-lg-4 mx-auto"
-                                    src={require("../images/home/qr_citibanamex.jpg")}
-                                />
                             </Card.Body>
                         </Accordion.Collapse>
                     </Card>
 
                     <Card>
                         <Card.Header>
+                            {/* Modificar link de paypal y moneypool */}
                             <Accordion.Toggle
                                 as={Button}
                                 variant="link"
-                                href="https://www.paypal.com/donate?token=-rFsLiXyuFvB3GDNoZx0NQbTHX7Wl5xmEVYWu-yGKl2aSz_SJdWhXdMvfIp2QY9KKapgZN48__a_bYq7"
+                                href="https://www.paypal.com/paypalme/comedorinfantil"
                                 target="_blank"
-                                eventKey="1">
-                                <Card.Img
-                                    src={require("../images/home/paypal logo.png")}
-                                />
-                            </Accordion.Toggle>
+                                eventKey="1"></Accordion.Toggle>
                         </Card.Header>
                     </Card>
 
@@ -208,13 +213,9 @@ function Home() {
                             <Accordion.Toggle
                                 as={Button}
                                 variant="link"
-                                href="https://www.moneypool.mx/p/ey3FWEY#"
+                                href="https://www.moneypool.mx/p/yAW1A2k"
                                 target="_blank"
-                                eventKey="2">
-                                <Card.Img
-                                    src={require("../images/home/moneypool logo.png")}
-                                />
-                            </Accordion.Toggle>
+                                eventKey="2"></Accordion.Toggle>
                         </Card.Header>
                     </Card>
                 </Accordion>
