@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../layout";
-import Head from "../head";
+import Layout from "./layout";
+import Head from "./head";
 import { Link } from "gatsby";
 import Accordion from "react-bootstrap/Accordion";
 import Image from "react-bootstrap/Image";
@@ -8,7 +8,7 @@ import { Card, CardDeck } from "react-bootstrap";
 import { Button, ButtonToolbar } from "react-bootstrap";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
 import { secciones, accordionTestimonios } from "./Textos";
-import homeStyles from "../../styles/components/home.module.scss";
+import homeStyles from "../styles/components/home.module.scss";
 
 function Home() {
     return (
@@ -20,7 +20,7 @@ function Home() {
                         className={`${homeStyles.sectionLeft} col-12 col-md-10 col-lg-7 col-xl-6`}>
                         <Image
                             className={`${homeStyles.logo} col-8 col-md-6 col-lg-4 mx-lg-auto`}
-                            src={require("../../images/home/logo-esperanza-al-debil.png")}
+                            src={require("..//images/home/logo-esperanza-al-debil.png")}
                         />
                         <h1 className="text-center">
                             Siembra hoy en los niños, cosecha mañana un mundo
@@ -69,7 +69,7 @@ function Home() {
 
                         <Card className="col-8 mx-10 col-lg-5 col-xl-4 mx-lg-auto border-0">
                             <Card.Img
-                                src={require(`../../images/home/${secciones[0].cards[1].img}`)}
+                                src={require(`..//images/home/${secciones[0].cards[1].img}`)}
                             />
                         </Card>
                     </div>
@@ -84,8 +84,7 @@ function Home() {
                                 key={`card-${card.id}`}>
                                 <Card.Img
                                     className="px-lg-4 py-lg-0 p-xl-0"
-                                    src={require("../../images/home/" +
-                                        card.img)}
+                                    src={require("..//images/home/" + card.img)}
                                 />
                                 <Card.Body className="px-0">
                                     <Card.Title style={{ textAlign: "center" }}>
@@ -183,7 +182,7 @@ function Home() {
 
                                 <Card.Img
                                     className="col-7 col-md-5 col-lg-4 mx-auto"
-                                    src={require("../../images/home/qr_citibanamex.jpg")}
+                                    src={require("..//images/home/qr_citibanamex.jpg")}
                                 />
                             </Card.Body>
                         </Accordion.Collapse>
@@ -198,7 +197,7 @@ function Home() {
                                 target="_blank"
                                 eventKey="1">
                                 <Card.Img
-                                    src={require("../../images/home/paypal logo.png")}
+                                    src={require("..//images/home/paypal logo.png")}
                                 />
                             </Accordion.Toggle>
                         </Card.Header>
@@ -213,7 +212,7 @@ function Home() {
                                 target="_blank"
                                 eventKey="2">
                                 <Card.Img
-                                    src={require("../../images/home/moneypool logo.png")}
+                                    src={require("..//images/home/moneypool logo.png")}
                                 />
                             </Accordion.Toggle>
                         </Card.Header>
