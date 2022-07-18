@@ -6,8 +6,16 @@ export const secciones = [
             {
                 img: "",
                 body: [
-                    "Somos una Asociación Civil, con 5 años de experiencia, que tiene como principal actividad, atender a niños con el modelo de comedores infantiles.",
-                    "Tenemos como objetivo ayudar a personas en situación vulnerable (niños y niñas, personas de la tercera edad, mujeres embarazadas, madres solteras) fortaleciendo los valores morales y espirituales de cada familia, así mismo complementar sus necesidades básicas como alimentación, vestido, educación, nutrición y prevención de la salud.",
+                    {
+                        text:
+                            "Somos una Asociación Civil, con 5 años de experiencia, que tiene como principal actividad, atender a niños con el modelo de comedores infantiles.",
+                        id: 1,
+                    },
+                    {
+                        text:
+                            "Tenemos como objetivo ayudar a personas en situación vulnerable (niños y niñas, personas de la tercera edad, mujeres embarazadas, madres solteras) fortaleciendo los valores morales y espirituales de cada familia, así mismo complementar sus necesidades básicas como alimentación, vestido, educación, nutrición y prevención de la salud.",
+                        id: 2,
+                    },
                 ],
             },
             {
@@ -21,18 +29,22 @@ export const secciones = [
         title: "Apoyo durante la pandemia",
         cards: [
             {
+                id: 1,
                 img: "despensaicono.png",
                 title: "+1,500 Despensas Familiares",
             },
             {
+                id: 2,
                 img: "appleicon.png",
                 title: "+4,500 Apoyos Alimentarios",
             },
             {
+                id: 3,
                 img: "familyicon.png",
                 title: "125 Familias Apadrinadas",
             },
             {
+                id: 4,
                 img: "peopleicon.png",
                 title: "+6,000 Personas Beneficiadas",
             },

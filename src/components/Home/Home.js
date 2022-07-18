@@ -15,14 +15,11 @@ function Home() {
         <Layout>
             <Head title="Comedor Infantil Mensajero de Paz" />
             <div className="container mt-5">
-                <div className="row justify-content-center align-items-center mb-4">
+                <div className={`${homeStyles.firstSection} row`}>
                     <div
-                        className={
-                            homeStyles.firstSectionLeft +
-                            " col-12 col-md-10 col-lg-7 col-xl-6"
-                        }>
+                        className={`${homeStyles.sectionLeft} col-12 col-md-10 col-lg-7 col-xl-6`}>
                         <Image
-                            className="col-8 col-md-6 col-lg-4 mx-lg-auto"
+                            className={`${homeStyles.logo} col-8 col-md-6 col-lg-4 mx-lg-auto`}
                             src={require("../../images/home/logo-esperanza-al-debil.png")}
                         />
                         <h1 className="text-center">
@@ -33,14 +30,14 @@ function Home() {
                             <Button
                                 className={homeStyles.homeButtons}
                                 as={Link}
-                                to="/Contacto">
-                                Contacto
+                                to="/ComoAyudar">
+                                Como Ayudar
                             </Button>
                             <Button
                                 className={homeStyles.homeButtons}
                                 as={Link}
-                                to="/ComoAyudar">
-                                Como Ayudar
+                                to="/Contacto">
+                                Contacto
                             </Button>
                         </ButtonToolbar>
                     </div>
@@ -54,46 +51,52 @@ function Home() {
                         allowFullScreen
                         title="Informe Actividades Anuales"></iframe>
                 </div>
-
-                <hr />
-
-                <h1 className="display-5 pb-3">{secciones[0].title}</h1>
-                <div className="row justify-content-center">
-                    <Card className="col-12 col-lg-7 border-0">
-                        <Card.Body className="pt-0 pt-lg-3">
-                            {secciones[0].cards[0].body.map((parrafo) => (
-                                <p className="lead text-justify">{parrafo}</p>
-                            ))}
-                        </Card.Body>
-                    </Card>
-
-                    <Card className="col-8 mx-10 col-lg-5 col-xl-4 mx-lg-auto border-0">
-                        <Card.Img
-                            src={require("../../images/home/" +
-                                secciones[0].cards[1].img)}
-                        />
-                    </Card>
-                </div>
-                <hr />
-
-                <h1 className="display-5 pb-3">{secciones[1].title}</h1>
-                <div className="row justify-content-center">
-                    {secciones[1].cards.map((card) => (
-                        <Card className="col-4 mx-3 col-md-3 mx-md-5 col-lg-3 col-xl-2 mx-lg-auto border-0">
-                            <Card.Img
-                                className="px-lg-4 py-lg-0 p-xl-0"
-                                src={require("../../images/home/" + card.img)}
-                            />
-                            <Card.Body className="px-0">
-                                <Card.Title style={{ textAlign: "center" }}>
-                                    {card.title}
-                                </Card.Title>
+                <hr /> {/* Eliminar si no se usa */}
+                <div className={homeStyles.secondSection}>
+                    <h1 className="display-5 pb-3">{secciones[0].title}</h1>
+                    <div className="row justify-content-center">
+                        <Card className="col-12 col-lg-7 border-0">
+                            <Card.Body className="pt-0 pt-lg-3">
+                                {secciones[0].cards[0].body.map((parrafo) => (
+                                    <p
+                                        key={`parrafo-${parrafo.id}-seccion1`}
+                                        className="lead text-justify">
+                                        {parrafo.text}
+                                    </p>
+                                ))}
                             </Card.Body>
                         </Card>
-                    ))}
+
+                        <Card className="col-8 mx-10 col-lg-5 col-xl-4 mx-lg-auto border-0">
+                            <Card.Img
+                                src={require(`../../images/home/${secciones[0].cards[1].img}`)}
+                            />
+                        </Card>
+                    </div>
+                </div>
+                <hr /> {/* Eliminar si no se usa */}
+                <div className={homeStyles.thirdSection}>
+                    <h1 className="display-5 pb-3">{secciones[1].title}</h1>
+                    <div className="row justify-content-center">
+                        {secciones[1].cards.map((card) => (
+                            <Card
+                                className="col-4 mx-3 col-md-3 mx-md-5 col-lg-3 col-xl-2 mx-lg-auto border-0"
+                                key={`card-${card.id}`}>
+                                <Card.Img
+                                    className="px-lg-4 py-lg-0 p-xl-0"
+                                    src={require("../../images/home/" +
+                                        card.img)}
+                                />
+                                <Card.Body className="px-0">
+                                    <Card.Title style={{ textAlign: "center" }}>
+                                        {card.title}
+                                    </Card.Title>
+                                </Card.Body>
+                            </Card>
+                        ))}
+                    </div>
                 </div>
                 <hr />
-
                 <h1 className="display-5 pb-3">{secciones[2].title}</h1>
                 <CardDeck>
                     {secciones[2].cards.map((card) => (
@@ -112,7 +115,6 @@ function Home() {
                     ))}
                 </CardDeck>
                 <hr />
-
                 <h1 className="display-5 pb-3">Testimonios</h1>
                 <Accordion defaultActiveKey="0">
                     {accordionTestimonios.map((seccion) => (
@@ -141,7 +143,6 @@ function Home() {
                     ))}
                 </Accordion>
                 <hr />
-
                 <h1 className="display-5 pb-3">Aportar a la causa</h1>
                 <p className="lead text-justify">
                     Puedes hacer donativos en especie, o bien donar directamente
