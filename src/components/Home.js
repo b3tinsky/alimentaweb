@@ -204,7 +204,11 @@ function Home() {
                                 variant="link"
                                 href="https://www.paypal.com/paypalme/comedorinfantil"
                                 target="_blank"
-                                eventKey="1"></Accordion.Toggle>
+                                eventKey="1">
+                                <Card.Img
+                                    src={require("../images/home/paypal logo.png")}
+                                />
+                            </Accordion.Toggle>
                         </Card.Header>
                     </Card>
 
@@ -215,7 +219,11 @@ function Home() {
                                 variant="link"
                                 href="https://www.moneypool.mx/p/yAW1A2k"
                                 target="_blank"
-                                eventKey="2"></Accordion.Toggle>
+                                eventKey="2">
+                                <Card.Img
+                                    src={require("../images/home/moneypool logo.png")}
+                                />
+                            </Accordion.Toggle>
                         </Card.Header>
                     </Card>
                 </Accordion>
