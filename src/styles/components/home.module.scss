@@ -1,3 +1,11 @@
+@use '../colors.module.scss';
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .firstSection {
     align-items: center;
     justify-content: center;
@@ -13,15 +21,36 @@
     }
 
     .homeButtons {
+        // Agregar camnbio de color al boton
         border-radius: 1rem;
         font-weight: 700;
         font-size: 1.1rem;
         width: 40%;
+        border: 3px solid colors.$blue;
         padding: {
             top: 0.75rem;
             bottom: 0.75rem;
             left: 0.5rem;
             right: 0.5rem;
+        }
+
+        &:nth-child(1) {
+            background-color: colors.$blue;
+            border: none;
+            &:hover {
+                background-color: colors.$blue-dark;
+                border-color: colors.$blue-dark;
+            }
+        }
+
+        &:nth-child(2) {
+            background-color: white;
+            color: colors.$blue;
+            &:hover {
+                background-color: colors.$blue-dark;
+                color: white;
+                border-color: colors.$blue-dark;
+            }
         }
     }
 
@@ -32,6 +61,56 @@
     }
 }
 
-// Uncomment to add CSS
-// .secondSection {
-// }
+// Uncomment for css on second section
+// .secondSection {}
+
+.thirdSection {
+    .cards {
+        // Arreglar colores
+        background-color: rgb(221, 221, 221);
+        border-style: none;
+        border-radius: 1rem;
+        padding-top: 15px;
+        margin-bottom: 1.5rem;
+
+        .cardTitle {
+            text-align: center;
+            font-weight: bold;
+            color: black;
+        }
+
+        .cardText {
+            text-align: center;
+            text-justify: auto;
+            color: black;
+        }
+    }
+}
+
+.fourthSection {
+    .cards {
+        border: none;
+
+        .cardTitleN {
+            font-weight: bold;
+            font-size: 2.5rem;
+            color: colors.$blue;
+            margin-bottom: 0;
+        }
+
+        .cardTitle {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: black;
+        }
+
+        .cardText {
+            text-align: center;
+            text-align: left;
+            color: black;
+        }
+    }
+}
+
+// Uncomment for css on fifth section
+// .fifthSection {}

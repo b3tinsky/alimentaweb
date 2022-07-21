@@ -2,13 +2,23 @@ import React from "react";
 import Layout from "./layout";
 import Head from "./head";
 import { Link } from "gatsby";
-import Accordion from "react-bootstrap/Accordion";
-import Image from "react-bootstrap/Image";
-import { Card, CardDeck } from "react-bootstrap";
-import { Button, ButtonToolbar } from "react-bootstrap";
-import { ListGroup, ListGroupItem } from "react-bootstrap";
+import {
+    Accordion,
+    Card,
+    CardDeck,
+    Carousel,
+    Button,
+    ButtonToolbar,
+    Image,
+} from "react-bootstrap";
 import { secciones, accordionTestimonios } from "./TextosHome";
 import homeStyles from "../styles/components/home.module.scss";
+
+/* Pendientes:
+1. Realizar cambios en la sección de testimonios
+2. Realizar cambios en la sección de apoyos
+3. Agregar los colores nuevos a toda la pagina principal
+*/
 
 function Home() {
     return (
@@ -80,67 +90,96 @@ function Home() {
                     <div className="row justify-content-center">
                         {secciones[1].cards.map((card) => (
                             <Card
-                                className="col-4 mx-3 col-md-3 mx-md-5 col-lg-3 col-xl-2 mx-lg-auto border-0"
-                                key={`card-${card.id}`}>
+                                className={`${homeStyles.cards} col-6 mx-3 col-md-3 mx-md-5 col-lg-3 col-xl-2 mx-lg-auto`}
+                                key={`section3-card-${card.id}`}>
                                 <Card.Img
                                     className="px-lg-4 py-lg-0 p-xl-0"
                                     src={require("../images/home/" + card.img)}
                                 />
                                 <Card.Body className="px-0">
-                                    <Card.Title style={{ textAlign: "center" }}>
+                                    <Card.Title
+                                        className={homeStyles.cardTitle}>
                                         {card.title}
                                     </Card.Title>
+                                    <Card.Text className={homeStyles.cardText}>
+                                        {card.text}
+                                    </Card.Text>
                                 </Card.Body>
                             </Card>
                         ))}
                     </div>
                 </div>
-                <hr />
-                <h1 className="display-5 pb-3">{secciones[2].title}</h1>
-                <CardDeck>
-                    {secciones[2].cards.map((card) => (
-                        <Card>
-                            <Card.Body>
-                                <Card.Title style={{ textAlign: "center" }}>
-                                    {card.title}
-                                </Card.Title>
-                                {card.body.map((parrafo) => (
-                                    <p className="lead text-justify">
-                                        {parrafo}
-                                    </p>
-                                ))}
-                            </Card.Body>
-                        </Card>
-                    ))}
-                </CardDeck>
-                <hr />
-                <h1 className="display-5 pb-3">Testimonios</h1>
-                <Accordion defaultActiveKey="0">
-                    {accordionTestimonios.map((seccion) => (
-                        <Card id={seccion.id}>
-                            <Card.Header>
-                                <Accordion.Toggle
-                                    as={Button}
-                                    variant="link"
-                                    eventKey={`${seccion.id}`}>
-                                    {seccion.title}
-                                </Accordion.Toggle>
-                            </Card.Header>
-
-                            <Accordion.Collapse eventKey={`${seccion.id}`}>
+                <hr /> {/* Eliminar si no se usa */}
+                <div className={homeStyles.fourthSection}>
+                    <h1 className="display-5 pb-3">{secciones[2].title}</h1>
+                    <CardDeck>
+                        {secciones[2].cards.map((card) => (
+                            <Card
+                                className={homeStyles.cards}
+                                key={`section4-card-${card.id}`}>
                                 <Card.Body>
-                                    <ListGroup className="list-group-flush">
-                                        {seccion.body.map((parrafo) => (
-                                            <ListGroupItem className="text-justify">
-                                                {parrafo}
-                                            </ListGroupItem>
-                                        ))}
-                                    </ListGroup>
+                                    <Card.Title>
+                                        <p className={homeStyles.cardTitleN}>
+                                            {card.titleN}
+                                        </p>
+                                        <p className={homeStyles.cardTitle}>
+                                            {card.title}
+                                        </p>
+                                    </Card.Title>
+                                    <p
+                                        className={`${homeStyles.cardText} lead`}>
+                                        {card.body}
+                                    </p>
                                 </Card.Body>
-                            </Accordion.Collapse>
-                        </Card>
-                    ))}
-                </Accordion>
+                            </Card>
+                        ))}
+                    </CardDeck>
+                </div>
+                <hr />
+                <div className={homeStyles.fifthSection}>
+                    <h1 className="display-5 pb-3">Testimonios</h1>
+                    <Carousel controls={false} touch={true}>
+                        {accordionTestimonios.map((testimonio) => (
+                            <Carousel.Item
+                                key={`${testimonio.title}-${testimonio.id}`}>
+                                <Card>
+                                    <Card.Body>
+                                        <Card.Title>
+                                            {testimonio.title}
+                                        </Card.Title>
+                                        <Card.Text>{testimonio.body}</Card.Text>
+                                    </Card.Body>
+                                </Card>
+                            </Carousel.Item>
+                        ))}
+                    </Carousel>
+                    {/* <Accordion defaultActiveKey="0">
+                        {accordionTestimonios.map((seccion) => (
+                            <Card id={seccion.id}>
+                                <Card.Header>
+                                    <Accordion.Toggle
+                                        as={Button}
+                                        variant="link"
+                                        eventKey={`${seccion.id}`}>
+                                        {seccion.title}
+                                    </Accordion.Toggle>
+                                </Card.Header>
+
+                                <Accordion.Collapse eventKey={`${seccion.id}`}>
+                                    <Card.Body>
+                                        <ListGroup className="list-group-flush">
+                                            {seccion.body.map((parrafo) => (
+                                                <ListGroupItem className="text-justify">
+                                                    {parrafo}
+                                                </ListGroupItem>
+                                            ))}
+                                        </ListGroup>
+                                    </Card.Body>
+                                </Accordion.Collapse>
+                            </Card>
+                        ))}
+                    </Accordion> */}
+                </div>
                 <hr />
                 <h1 className="display-5 pb-3">Aportar a la causa</h1>
                 <p className="lead text-justify">
