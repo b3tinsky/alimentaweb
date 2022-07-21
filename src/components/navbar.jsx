@@ -9,6 +9,7 @@ function navbar() {
 			<Navbar.Toggle className={ navStyles.navLink } aria-controls="basic-navbar-nav" />
 			<Navbar.Collapse id="basic-navbar-nav">
 				<Nav className="ml-auto">
+					<Nav.Link className={ navStyles.navLink } href="/">Inicio</Nav.Link>
 					<Nav.Link className={ navStyles.navLink } href="/SobreNosotros">Sobre Nosotros</Nav.Link>
 					<Nav.Link className={ navStyles.navLink } href="/Programas">Programas</Nav.Link>
 					<Nav.Link className={ navStyles.navLink } href="/Comedores">Comedores</Nav.Link>
