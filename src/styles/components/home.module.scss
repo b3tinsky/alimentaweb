@@ -36,7 +36,6 @@
 
         &:nth-child(1) {
             background-color: colors.$blue;
-            border: none;
             &:hover {
                 background-color: colors.$blue-dark;
                 border-color: colors.$blue-dark;
@@ -72,11 +71,13 @@
         border-radius: 1rem;
         padding-top: 15px;
         margin-bottom: 1.5rem;
+        padding-left: 25px;
+        padding-right: 25px;
 
         .cardTitle {
             text-align: center;
             font-weight: bold;
-            color: black;
+            color: colors.$blue;
         }
 
         .cardText {
