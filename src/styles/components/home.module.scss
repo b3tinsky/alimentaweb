@@ -66,8 +66,8 @@
 
 .thirdSection {
     .cards {
-        // Arreglar colores
-        background-color: rgb(221, 221, 221);
+        // background-color: rgb(221, 221, 221);
+        background-color: colors.$blue-light;
         border-style: none;
         border-radius: 1rem;
         padding-top: 15px;
@@ -108,9 +108,76 @@
             text-align: center;
             text-align: left;
             color: black;
+            margin-bottom: 0;
         }
     }
 }
 
 // Uncomment for css on fifth section
-// .fifthSection {}
+.fifthSection {
+    height: 35rem;
+
+    .carousel {
+        height: 30.5rem;
+        display: flex;
+    }
+
+    .cardTitle {
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: colors.$blue;
+    }
+
+    .carouselCards {
+        border-radius: 1rem;
+        border-width: 2px;
+    }
+}
+
+.sixthSection {
+}
+
+@media (min-width: 576px) {
+    // Third section
+    .cardDeck {
+        flex-direction: column !important;
+    }
+
+    .fifthSection {
+        height: 30rem;
+        .carousel {
+            height: 32rem;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .fifthSection {
+        height: 25rem;
+        .carousel {
+            height: 20rem;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .cardDeck {
+        flex-direction: row !important;
+    }
+
+    .fifthSection {
+        height: 22rem;
+        .carousel {
+            height: 17rem;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .fifthSection {
+        height: 20rem;
+        .carousel {
+            height: 15rem;
+        }
+    }
+}
