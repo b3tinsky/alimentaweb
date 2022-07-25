@@ -1,9 +1,9 @@
 import React from "react";
 import Layout from "./layout";
 import Head from "./head";
+import PaymentCards from "./PaymentCards";
 import { Link } from "gatsby";
 import {
-    Accordion,
     Card,
     CardDeck,
     Carousel,
@@ -162,32 +162,6 @@ function Home() {
                             </Carousel.Item>
                         ))}
                     </Carousel>
-                    {/* <Accordion defaultActiveKey="0">
-                        {accordionTestimonios.map((seccion) => (
-                            <Card id={seccion.id}>
-                                <Card.Header>
-                                    <Accordion.Toggle
-                                        as={Button}
-                                        variant="link"
-                                        eventKey={`${seccion.id}`}>
-                                        {seccion.title}
-                                    </Accordion.Toggle>
-                                </Card.Header>
-
-                                <Accordion.Collapse eventKey={`${seccion.id}`}>
-                                    <Card.Body>
-                                        <ListGroup className="list-group-flush">
-                                            {seccion.body.map((parrafo) => (
-                                                <ListGroupItem className="text-justify">
-                                                    {parrafo}
-                                                </ListGroupItem>
-                                            ))}
-                                        </ListGroup>
-                                    </Card.Body>
-                                </Accordion.Collapse>
-                            </Card>
-                        ))}
-                    </Accordion> */}
                 </div>
                 <hr />
                 <div className={homeStyles.sixthSection}>
@@ -203,81 +177,7 @@ function Home() {
                             Voluntaria
                         </strong>
                     </p>
-                    <Accordion defaultActiveKey="0">
-                        <Card>
-                            <Card.Header>
-                                <Accordion.Toggle
-                                    as={Button}
-                                    variant="link"
-                                    eventKey="0">
-                                    <h3>Deposita a nuestra cuenta bancaria</h3>
-                                </Accordion.Toggle>
-                            </Card.Header>
-                            <Accordion.Collapse eventKey="0">
-                                <Card.Body className="row justify-content-center">
-                                    <div className="col-12 col-sm-5 col-lg-4 mx-auto py-3 border-0">
-                                        <p className="lead">
-                                            <strong>Número de cuenta:</strong>
-                                            <br />
-                                            194119917
-                                        </p>
-                                        <p className="lead">
-                                            <strong>Clabe:</strong>
-                                            <br />
-                                            062580 001941 199171
-                                        </p>
-                                        <p className="lead">
-                                            <strong>Referencia:</strong>
-                                            <br />
-                                            Alimenta una familia
-                                        </p>
-                                        <h5>
-                                            <strong>
-                                                También puedes depositar en Oxxo
-                                            </strong>
-                                        </h5>
-                                        <p className="lead">
-                                            <strong>
-                                                Depositos a tarjeta de débito:
-                                            </strong>
-                                            <br /> 4320 4901 0098 9779
-                                        </p>
-                                    </div>
-                                </Card.Body>
-                            </Accordion.Collapse>
-                        </Card>
-
-                        <Card>
-                            <Card.Header>
-                                {/* Modificar link de paypal y moneypool */}
-                                <Accordion.Toggle
-                                    as={Button}
-                                    variant="link"
-                                    href="https://www.paypal.com/paypalme/comedorinfantil"
-                                    target="_blank"
-                                    eventKey="1">
-                                    <Card.Img
-                                        src={require("../images/home/paypal logo.png")}
-                                    />
-                                </Accordion.Toggle>
-                            </Card.Header>
-                        </Card>
-
-                        <Card>
-                            <Card.Header>
-                                <Accordion.Toggle
-                                    as={Button}
-                                    variant="link"
-                                    href="https://www.moneypool.mx/p/yAW1A2k"
-                                    target="_blank"
-                                    eventKey="2">
-                                    <Card.Img
-                                        src={require("../images/home/moneypool logo.png")}
-                                    />
-                                </Accordion.Toggle>
-                            </Card.Header>
-                        </Card>
-                    </Accordion>
+                    <PaymentCards />
                 </div>
             </div>
         </Layout>

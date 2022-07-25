@@ -2,6 +2,7 @@ import React from "react";
 import ComoAyudarCard from "../components/ComoAyudarCard";
 import Layout from "../components/layout";
 import Head from "../components/head";
+import PaymentCards from "../components/PaymentCards";
 
 function ComoAyudar() {
     /**
@@ -62,24 +63,7 @@ function ComoAyudar() {
                 </p>
                 <div className="row justify-content-center">
                     <div className="col col-sm-12 col-md-6">
-                        <div className="row my-5">
-                            <img
-                                className="w-100"
-                                src={require("../images/comoAyudar/tarjetas.jpg")}
-                                alt="Tarjetas"></img>
-                        </div>
-                        <div className="row my-5">
-                            <img
-                                className="w-100"
-                                src={require("../images/comoAyudar/paypal.jpg")}
-                                alt="Paypal"></img>
-                        </div>
-                        <div className="row my-5">
-                            <img
-                                className="w-100"
-                                src={require("../images/comoAyudar/codi.jpg")}
-                                alt="Codi"></img>
-                        </div>
+                        <PaymentCards />
                     </div>
                     <div className="col col-sm-12 col-md-6" style={styles}>
                         {manerasAyudar.map((maneraAyudar) => (
