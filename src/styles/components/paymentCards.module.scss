@@ -11,7 +11,7 @@
         border-color: colors.$blue-light;
         align-items: center;
         margin: 1rem;
-        height: 13rem;
+        width: 90%;
 
         .imageIcon {
             margin-top: 1rem;
@@ -49,6 +49,7 @@
 @media (min-width: 576px) {
     .paymentCards {
         .paymentOption {
+            height: 13rem;
             width: 90%;
         }
     }

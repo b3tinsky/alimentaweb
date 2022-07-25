@@ -18,6 +18,7 @@ function ComoAyudarCard({ id, title, description, images }) {
                 <div className="carousel-inner mh-25">
                     {images.map((image, index) => (
                         <div
+                            key={image}
                             className={`carousel-item ${
                                 index === 0 ? "active" : ""
                             }`}>

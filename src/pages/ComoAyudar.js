@@ -21,7 +21,7 @@ function ComoAyudar() {
             title: "Aportaciones voluntarias",
             description:
                 "Realiza aportaciones voluntarias para apoyar nuestros proyectos.",
-            images: ["comoAyudar/2d1", "comoAyudar/2d1", "comoAyudar/2d1"],
+            images: ["comoAyudar/2d1"],
         },
         {
             id: 3,
@@ -68,7 +68,7 @@ function ComoAyudar() {
                     <div className="col col-sm-12 col-md-6" style={styles}>
                         {manerasAyudar.map((maneraAyudar) => (
                             <ComoAyudarCard
-                                id={maneraAyudar.id}
+                                key={maneraAyudar.id}
                                 title={maneraAyudar.title}
                                 description={maneraAyudar.description}
                                 images={maneraAyudar.images}

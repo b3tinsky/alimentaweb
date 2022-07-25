@@ -37,7 +37,9 @@ function PaymentCards() {
                     size="3x"
                 />
                 <Card.Body className={paymentStyles.cardBody}>
-                    <Card.Title>Cuenta Bancaria</Card.Title>
+                    <Card.Title className={paymentStyles.cardText}>
+                        Cuenta Bancaria
+                    </Card.Title>
                     <Card.Text className={paymentStyles.cardText}>
                         <strong>Número de cuenta:</strong> 194119917 <br />
                         <strong>Clabe:</strong> 062580 001941 199171 <br />
@@ -68,7 +70,6 @@ function PaymentCards() {
                     className={paymentStyles.imageIcon}
                     size="3x"
                 />
-                <faPaypal />
                 <Card.Body className={paymentStyles.cardBody}>
                     <Card.Title className={paymentStyles.cardText}>
                         PayPal
