@@ -3,6 +3,7 @@
 .paymentCards {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     .paymentOption {
@@ -70,6 +71,10 @@
 
         .paymentOption {
             width: 45%;
+        }
+
+        .paymentOptionAlt {
+            width: 90% !important;
         }
     }
 }

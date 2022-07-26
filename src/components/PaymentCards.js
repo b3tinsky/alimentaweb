@@ -9,10 +9,13 @@ import {
     faMoneyBill,
 } from "@fortawesome/free-solid-svg-icons";
 
-function PaymentCards() {
+function PaymentCards(page) {
     return (
         <div className={paymentStyles.paymentCards}>
-            <Card className={paymentStyles.paymentOption}>
+            <Card
+                className={`${paymentStyles.paymentOption} ${
+                    page === "comoAyudar" ? paymentStyles.paymentOptionAlt : ""
+                }`}>
                 <FontAwesomeIcon
                     icon={faCreditCard}
                     className={paymentStyles.imageIcon}
@@ -30,6 +33,7 @@ function PaymentCards() {
                     </Card.Link>
                 </Card.Body>
             </Card>
+
             <Card className={paymentStyles.paymentOption}>
                 <FontAwesomeIcon
                     icon={faMoneyBill}
@@ -47,6 +51,7 @@ function PaymentCards() {
                     </Card.Text>
                 </Card.Body>
             </Card>
+
             <Card className={paymentStyles.paymentOption}>
                 <FontAwesomeIcon
                     icon={faStore}
@@ -64,6 +69,7 @@ function PaymentCards() {
                     </Card.Text>
                 </Card.Body>
             </Card>
+
             <Card className={paymentStyles.paymentOption}>
                 <FontAwesomeIcon
                     icon={faPaypal}
@@ -84,6 +90,7 @@ function PaymentCards() {
                     </Card.Link>
                 </Card.Body>
             </Card>
+
             <Card className={paymentStyles.paymentOption}>
                 <Card.Img
                     className={paymentStyles.moneypoolIcon}

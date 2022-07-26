@@ -62,10 +62,7 @@ function ComoAyudar() {
                     Dibuja una sonrisa en un niño. ¡Apóyanos!
                 </p>
                 <div className="row justify-content-center">
-                    <div className="col col-sm-12 col-md-6">
-                        <PaymentCards />
-                    </div>
-                    <div className="col col-sm-12 col-md-6" style={styles}>
+                    <div className="col-12 col-md-12 col-lg-6" style={styles}>
                         {manerasAyudar.map((maneraAyudar) => (
                             <ComoAyudarCard
                                 key={maneraAyudar.id}
@@ -74,6 +71,9 @@ function ComoAyudar() {
                                 images={maneraAyudar.images}
                             />
                         ))}
+                    </div>
+                    <div className="col-12 col-md-12 col-lg-6">
+                        <PaymentCards page={"comoAyudar"} />
                     </div>
                 </div>
             </div>
