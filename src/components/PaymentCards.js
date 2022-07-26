@@ -10,12 +10,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function PaymentCards(page) {
+    const cardClassName = `${paymentStyles.paymentOption} ${
+        page.page === "comoAyudar" ? paymentStyles.paymentOptionAlt : ""
+    }`;
     return (
         <div className={paymentStyles.paymentCards}>
-            <Card
-                className={`${paymentStyles.paymentOption} ${
-                    page === "comoAyudar" ? paymentStyles.paymentOptionAlt : ""
-                }`}>
+            <Card className={cardClassName}>
                 <FontAwesomeIcon
                     icon={faCreditCard}
                     className={paymentStyles.imageIcon}
@@ -28,13 +28,9 @@ function PaymentCards(page) {
                     <Card.Text className={paymentStyles.cardText}>
                         Aceptamos Visa, Mastercard y American Express.
                     </Card.Text>
-                    <Card.Link className={paymentStyles.cardLink} href="#">
-                        Saber más
-                    </Card.Link>
                 </Card.Body>
             </Card>
-
-            <Card className={paymentStyles.paymentOption}>
+            <Card className={cardClassName}>
                 <FontAwesomeIcon
                     icon={faMoneyBill}
                     className={paymentStyles.imageIcon}
@@ -52,7 +48,7 @@ function PaymentCards(page) {
                 </Card.Body>
             </Card>
 
-            <Card className={paymentStyles.paymentOption}>
+            <Card className={cardClassName}>
                 <FontAwesomeIcon
                     icon={faStore}
                     className={paymentStyles.imageIcon}
@@ -70,7 +66,7 @@ function PaymentCards(page) {
                 </Card.Body>
             </Card>
 
-            <Card className={paymentStyles.paymentOption}>
+            <Card className={cardClassName}>
                 <FontAwesomeIcon
                     icon={faPaypal}
                     className={paymentStyles.imageIcon}
@@ -90,8 +86,7 @@ function PaymentCards(page) {
                     </Card.Link>
                 </Card.Body>
             </Card>
-
-            <Card className={paymentStyles.paymentOption}>
+            <Card className={cardClassName}>
                 <Card.Img
                     className={paymentStyles.moneypoolIcon}
                     variant="top"

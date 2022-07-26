@@ -1,5 +1,5 @@
 import React from "react";
-
+import styles from "../styles/pages/comoAyudar.module.scss";
 /**
 Program Cards
 param @id id of "manerasDeAyudar" to make a unique carousel of images
@@ -10,7 +10,7 @@ param @images array of image paths (without image extension and "../")
 
 function ComoAyudarCard({ id, title, description, images }) {
     return (
-        <div className="card my-5">
+        <div className={`card my-5 ${styles.comoAyudarCard}`}>
             <div
                 id={`carousel-${id}`}
                 className="carousel slide card-img-top p-2"
@@ -23,7 +23,7 @@ function ComoAyudarCard({ id, title, description, images }) {
                                 index === 0 ? "active" : ""
                             }`}>
                             <img
-                                className="d-block w-100"
+                                className={`${styles.image} d-block w-100`}
                                 src={require("../images/" + image + ".jpg")}
                                 alt=""
                             />

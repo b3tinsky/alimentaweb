@@ -1,0 +1,11 @@
+@use '../colors.module.scss';
+
+.comoAyudarCard {
+    border-radius: 1rem !important;
+    border-width: 2px !important;
+    border-color: colors.$blue-light !important;
+
+    .image {
+        border-radius: 1rem !important;
+    }
+}
