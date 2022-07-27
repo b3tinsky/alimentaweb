@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/pages/comoAyudar.module.scss";
+import styles from "../styles/pages/ComoAyudar.module.scss";
 /**
 Program Cards
 param @id id of "manerasDeAyudar" to make a unique carousel of images
