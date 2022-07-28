@@ -2,13 +2,12 @@
 .contactComplete {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
     margin: 0;
-    width: 90%;
+    width: 100%;
 
     .contactBox {
         border: none !important;
+        width: 100%;
 
         .linksBox {
             display: flex;
@@ -19,14 +18,39 @@
                 margin: 0;
                 padding: 5px;
                 color: colors.$blue;
+                width: 56px;
+                height: 56px;
                 &:hover {
                     color: colors.$blue-clear;
                 }
             }
 
             .links {
-                padding: 6px;
-                text-align: center;
+                font-size: 0.9rem;
+            }
+        }
+    }
+    .mapBox {
+        width: 100%;
+
+        .mapGoogle {
+            height: 450px;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .contactComplete {
+        .contactBox {
+            .linksBox {
+                .links {
+                    width: 100%;
+                }
+            }
+        }
+        .mapBox {
+            .mapGoogle {
+                width: 100%;
             }
         }
     }
@@ -36,7 +60,13 @@
     .contactComplete {
         flex-direction: column;
         .contactBox {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            .links {
+                width: 80%;
+            }
+        }
+        .mapGoogle {
+            width: 100%;
         }
     }
 }
