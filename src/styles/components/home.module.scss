@@ -1,3 +1,11 @@
+@use '../colors.module.scss';
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .firstSection {
     align-items: center;
     justify-content: center;
@@ -13,15 +21,35 @@
     }
 
     .homeButtons {
+        // Agregar camnbio de color al boton
         border-radius: 1rem;
         font-weight: 700;
         font-size: 1.1rem;
         width: 40%;
+        border: 3px solid colors.$blue;
         padding: {
             top: 0.75rem;
             bottom: 0.75rem;
             left: 0.5rem;
             right: 0.5rem;
+        }
+
+        &:nth-child(1) {
+            background-color: colors.$blue;
+            &:hover {
+                background-color: colors.$blue-dark;
+                border-color: colors.$blue-dark;
+            }
+        }
+
+        &:nth-child(2) {
+            background-color: white;
+            color: colors.$blue;
+            &:hover {
+                background-color: colors.$blue-dark;
+                color: white;
+                border-color: colors.$blue-dark;
+            }
         }
     }
 
@@ -32,6 +60,124 @@
     }
 }
 
-// Uncomment to add CSS
-// .secondSection {
-// }
+// Uncomment for css on second section
+// .secondSection {}
+
+.thirdSection {
+    .cards {
+        // background-color: rgb(221, 221, 221);
+        background-color: colors.$blue-light;
+        border-style: none;
+        border-radius: 1rem;
+        padding-top: 15px;
+        margin-bottom: 1.5rem;
+        padding-left: 25px;
+        padding-right: 25px;
+
+        .cardTitle {
+            text-align: center;
+            font-weight: bold;
+            color: colors.$blue;
+        }
+
+        .cardText {
+            text-align: center;
+            text-justify: auto;
+            color: black;
+        }
+    }
+}
+
+.fourthSection {
+    .cards {
+        border: none;
+
+        .cardTitleN {
+            font-weight: bold;
+            font-size: 2.5rem;
+            color: colors.$blue;
+            margin-bottom: 0;
+        }
+
+        .cardTitle {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: black;
+        }
+
+        .cardText {
+            text-align: center;
+            text-align: left;
+            color: black;
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Uncomment for css on fifth section
+.fifthSection {
+    height: 35rem;
+
+    .carousel {
+        height: 30.5rem;
+        display: flex;
+    }
+
+    .cardTitle {
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: colors.$blue;
+    }
+
+    .carouselCards {
+        border-radius: 1rem;
+        border-width: 2px;
+    }
+}
+
+// .sixthSection {}
+
+@media (min-width: 576px) {
+    // Third section
+    .cardDeck {
+        flex-direction: column !important;
+    }
+
+    .fifthSection {
+        height: 30rem;
+        .carousel {
+            height: 32rem;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .fifthSection {
+        height: 25rem;
+        .carousel {
+            height: 20rem;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .cardDeck {
+        flex-direction: row !important;
+    }
+
+    .fifthSection {
+        height: 22rem;
+        .carousel {
+            height: 17rem;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .fifthSection {
+        height: 20rem;
+        .carousel {
+            height: 15rem;
+        }
+    }
+}

@@ -2,6 +2,7 @@ import React from "react";
 import ComoAyudarCard from "../components/ComoAyudarCard";
 import Layout from "../components/layout";
 import Head from "../components/head";
+import PaymentCards from "../components/PaymentCards";
 
 function ComoAyudar() {
     /**
@@ -20,7 +21,7 @@ function ComoAyudar() {
             title: "Aportaciones voluntarias",
             description:
                 "Realiza aportaciones voluntarias para apoyar nuestros proyectos.",
-            images: ["comoAyudar/2d1", "comoAyudar/2d1", "comoAyudar/2d1"],
+            images: ["comoAyudar/2d1"],
         },
         {
             id: 3,
@@ -61,35 +62,19 @@ function ComoAyudar() {
                     Dibuja una sonrisa en un niño. ¡Apóyanos!
                 </p>
                 <div className="row justify-content-center">
-                    <div className="col col-sm-12 col-md-6">
-                        <div className="row my-5">
-                            <img
-                                className="w-100"
-                                src={require("../images/comoAyudar/tarjetas.jpg")}
-                                alt="Tarjetas"></img>
-                        </div>
-                        <div className="row my-5">
-                            <img
-                                className="w-100"
-                                src={require("../images/comoAyudar/paypal.jpg")}
-                                alt="Paypal"></img>
-                        </div>
-                        <div className="row my-5">
-                            <img
-                                className="w-100"
-                                src={require("../images/comoAyudar/codi.jpg")}
-                                alt="Codi"></img>
-                        </div>
-                    </div>
-                    <div className="col col-sm-12 col-md-6" style={styles}>
+                    <div className="col-12 col-md-12 col-lg-6" style={styles}>
                         {manerasAyudar.map((maneraAyudar) => (
                             <ComoAyudarCard
                                 id={maneraAyudar.id}
+                                key={maneraAyudar.id}
                                 title={maneraAyudar.title}
                                 description={maneraAyudar.description}
                                 images={maneraAyudar.images}
                             />
                         ))}
+                    </div>
+                    <div className="col-12 col-md-12 col-lg-6">
+                        <PaymentCards page="comoAyudar" />
                     </div>
                 </div>
             </div>

@@ -1,15 +1,24 @@
 import React from "react";
 import Layout from "./layout";
 import Head from "./head";
+import PaymentCards from "./PaymentCards";
 import { Link } from "gatsby";
-import Accordion from "react-bootstrap/Accordion";
-import Image from "react-bootstrap/Image";
-import { Card, CardDeck } from "react-bootstrap";
-import { Button, ButtonToolbar } from "react-bootstrap";
-import { ListGroup, ListGroupItem } from "react-bootstrap";
+import {
+    Card,
+    CardDeck,
+    Carousel,
+    Button,
+    ButtonToolbar,
+    Image,
+} from "react-bootstrap";
 import { secciones, accordionTestimonios } from "./TextosHome";
 import homeStyles from "../styles/components/home.module.scss";
+import "../styles/components/homeCarousel.scss";
 
+/* Pendientes:
+2. Realizar cambios en la sección de apoyos
+3. Agregar los colores nuevos a toda la pagina principal
+*/
 function Home() {
     return (
         <Layout>
@@ -80,153 +89,96 @@ function Home() {
                     <div className="row justify-content-center">
                         {secciones[1].cards.map((card) => (
                             <Card
-                                className="col-4 mx-3 col-md-3 mx-md-5 col-lg-3 col-xl-2 mx-lg-auto border-0"
-                                key={`card-${card.id}`}>
+                                className={`${homeStyles.cards} col-6 mx-3 col-md-3 mx-md-5 col-lg-3 col-xl-2 mx-xl-auto`}
+                                key={`section3-card-${card.id}`}>
                                 <Card.Img
-                                    className="px-lg-4 py-lg-0 p-xl-0"
+                                    className="px-lg-3 py-lg-3 p-xl-1"
                                     src={require("../images/home/" + card.img)}
                                 />
                                 <Card.Body className="px-0">
-                                    <Card.Title style={{ textAlign: "center" }}>
+                                    <Card.Title
+                                        className={homeStyles.cardTitle}>
                                         {card.title}
                                     </Card.Title>
+                                    <Card.Text className={homeStyles.cardText}>
+                                        {card.text}
+                                    </Card.Text>
                                 </Card.Body>
                             </Card>
                         ))}
                     </div>
                 </div>
-                <hr />
-                <h1 className="display-5 pb-3">{secciones[2].title}</h1>
-                <CardDeck>
-                    {secciones[2].cards.map((card) => (
-                        <Card>
-                            <Card.Body>
-                                <Card.Title style={{ textAlign: "center" }}>
-                                    {card.title}
-                                </Card.Title>
-                                {card.body.map((parrafo) => (
-                                    <p className="lead text-justify">
-                                        {parrafo}
-                                    </p>
-                                ))}
-                            </Card.Body>
-                        </Card>
-                    ))}
-                </CardDeck>
-                <hr />
-                <h1 className="display-5 pb-3">Testimonios</h1>
-                <Accordion defaultActiveKey="0">
-                    {accordionTestimonios.map((seccion) => (
-                        <Card id={seccion.id}>
-                            <Card.Header>
-                                <Accordion.Toggle
-                                    as={Button}
-                                    variant="link"
-                                    eventKey={`${seccion.id}`}>
-                                    {seccion.title}
-                                </Accordion.Toggle>
-                            </Card.Header>
-
-                            <Accordion.Collapse eventKey={`${seccion.id}`}>
+                <hr /> {/* Eliminar si no se usa */}
+                <div className={homeStyles.fourthSection}>
+                    <h1 className="display-5 pb-3">{secciones[2].title}</h1>
+                    <CardDeck className={homeStyles.cardDeck}>
+                        {secciones[2].cards.map((card) => (
+                            <Card
+                                className={homeStyles.cards}
+                                key={`section4-card-${card.id}`}>
                                 <Card.Body>
-                                    <ListGroup className="list-group-flush">
-                                        {seccion.body.map((parrafo) => (
-                                            <ListGroupItem className="text-justify">
-                                                {parrafo}
-                                            </ListGroupItem>
-                                        ))}
-                                    </ListGroup>
+                                    <Card.Title>
+                                        <p className={homeStyles.cardTitleN}>
+                                            {card.titleN}
+                                        </p>
+                                        <p className={homeStyles.cardTitle}>
+                                            {card.title}
+                                        </p>
+                                    </Card.Title>
+                                    <p
+                                        className={`${homeStyles.cardText} lead`}>
+                                        {card.body}
+                                    </p>
                                 </Card.Body>
-                            </Accordion.Collapse>
-                        </Card>
-                    ))}
-                </Accordion>
+                            </Card>
+                        ))}
+                    </CardDeck>
+                </div>
                 <hr />
-                <h1 className="display-5 pb-3">Aportar a la causa</h1>
-                <p className="lead text-justify">
-                    Puedes hacer donativos en especie, o bien donar directamente
-                    a nuestro PayPal, Moneypool o cuenta bancaria
-                </p>
-                <p className="lead text-justify">
-                    <strong>
-                        Alimenta una Familia con $500 y/o Aportación Voluntaria
-                    </strong>
-                </p>
-                <Accordion defaultActiveKey="0">
-                    <Card>
-                        <Card.Header>
-                            <Accordion.Toggle
-                                as={Button}
-                                variant="link"
-                                eventKey="0">
-                                <h3>Deposita a nuestra cuenta bancaria</h3>
-                            </Accordion.Toggle>
-                        </Card.Header>
-                        <Accordion.Collapse eventKey="0">
-                            <Card.Body className="row justify-content-center">
-                                <div className="col-12 col-sm-5 col-lg-4 mx-auto py-3 border-0">
-                                    <p className="lead">
-                                        <strong>Número de cuenta:</strong>
-                                        <br />
-                                        194119917
-                                    </p>
-                                    <p className="lead">
-                                        <strong>Clabe:</strong>
-                                        <br />
-                                        062580 001941 199171
-                                    </p>
-                                    <p className="lead">
-                                        <strong>Referencia:</strong>
-                                        <br />
-                                        Alimenta una familia
-                                    </p>
-                                    <h5>
-                                        <strong>
-                                            También puedes depositar en Oxxo
-                                        </strong>
-                                    </h5>
-                                    <p className="lead">
-                                        <strong>
-                                            Depositos a tarjeta de débito:
-                                        </strong>
-                                        <br /> 4320 4901 0098 9779
-                                    </p>
+                <div className={homeStyles.fifthSection}>
+                    <h1 className="display-5 pb-3">Testimonios</h1>
+                    <Carousel
+                        controls={false}
+                        touch={true}
+                        className={homeStyles.carousel}>
+                        {accordionTestimonios.map((testimonio) => (
+                            <Carousel.Item
+                                key={`${testimonio.title}-${testimonio.id}`}>
+                                <div>
+                                    <Card className={homeStyles.carouselCards}>
+                                        <Card.Body>
+                                            <Card.Title
+                                                className={
+                                                    homeStyles.cardTitle
+                                                }>
+                                                {testimonio.title}
+                                            </Card.Title>
+                                            <Card.Text>
+                                                {testimonio.body}
+                                            </Card.Text>
+                                        </Card.Body>
+                                    </Card>
                                 </div>
-                            </Card.Body>
-                        </Accordion.Collapse>
-                    </Card>
-
-                    <Card>
-                        <Card.Header>
-                            {/* Modificar link de paypal y moneypool */}
-                            <Accordion.Toggle
-                                as={Button}
-                                variant="link"
-                                href="https://www.paypal.com/paypalme/comedorinfantil"
-                                target="_blank"
-                                eventKey="1">
-                                <Card.Img
-                                    src={require("../images/home/paypal logo.png")}
-                                />
-                            </Accordion.Toggle>
-                        </Card.Header>
-                    </Card>
-
-                    <Card>
-                        <Card.Header>
-                            <Accordion.Toggle
-                                as={Button}
-                                variant="link"
-                                href="https://www.moneypool.mx/p/yAW1A2k"
-                                target="_blank"
-                                eventKey="2">
-                                <Card.Img
-                                    src={require("../images/home/moneypool logo.png")}
-                                />
-                            </Accordion.Toggle>
-                        </Card.Header>
-                    </Card>
-                </Accordion>
+                            </Carousel.Item>
+                        ))}
+                    </Carousel>
+                </div>
+                <hr />
+                <div className={homeStyles.sixthSection}>
+                    <h1 className="display-5 pb-3">Aportar a la causa</h1>
+                    <p className="lead text-justify">
+                        Puedes hacer donativos en especie, o bien donar
+                        directamente a nuestro PayPal, Moneypool o cuenta
+                        bancaria
+                    </p>
+                    <p className="lead text-justify">
+                        <strong>
+                            Alimenta una Familia con $500 y/o Aportación
+                            Voluntaria
+                        </strong>
+                    </p>
+                    <PaymentCards />
+                </div>
             </div>
         </Layout>
     );

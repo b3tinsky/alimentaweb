@@ -1,7 +1,42 @@
-.socialIcon {
-    margin: 0 0 0 20px;
-    color:rgb(2, 117, 216);
-    &:hover {
-        color:  rgb(35, 152, 255);
+@use '../colors.module.scss';
+.contactComplete {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    width: 90%;
+
+    .contactBox {
+        border: none !important;
+
+        .linksBox {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .socialIcon {
+                margin: 0;
+                padding: 5px;
+                color: colors.$blue;
+                &:hover {
+                    color: colors.$blue-clear;
+                }
+            }
+
+            .links {
+                padding: 6px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .contactComplete {
+        flex-direction: column;
+        .contactBox {
+            margin-bottom: 20px;
+        }
     }
 }
