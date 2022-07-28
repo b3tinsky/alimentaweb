@@ -13,6 +13,7 @@
         align-items: center;
         margin: 1rem;
         width: 90%;
+        height: 13rem;
 
         .imageIcon {
             margin-top: 1rem;
@@ -38,8 +39,6 @@
 
 @media (max-width: 576px) {
     .paymentOption {
-        height: 15rem;
-
         .cardBody {
             padding-left: 0.25rem;
             padding-right: 0.25rem;
@@ -50,7 +49,6 @@
 @media (min-width: 576px) {
     .paymentCards {
         .paymentOption {
-            height: 13rem;
             width: 90%;
         }
     }
