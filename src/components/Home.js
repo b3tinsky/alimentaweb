@@ -122,7 +122,7 @@ function Home() {
                                             {card.titleN}
                                         </p>
                                         <p className={homeStyles.cardTitle}>
-                                            {card.title}
+                                            {card.title }
                                         </p>
                                     </Card.Title>
                                     <p
@@ -164,21 +164,6 @@ function Home() {
                     </Carousel>
                 </div>
                 <hr />
-                <div className={homeStyles.sixthSection}>
-                    <h1 className="display-5 pb-3">Aportar a la causa</h1>
-                    <p className="lead text-justify">
-                        Puedes hacer donativos en especie, o bien donar
-                        directamente a nuestro PayPal, Moneypool o cuenta
-                        bancaria
-                    </p>
-                    <p className="lead text-justify">
-                        <strong>
-                            Alimenta una Familia con $500 y/o Aportación
-                            Voluntaria
-                        </strong>
-                    </p>
-                    <PaymentCards />
-                </div>
             </div>
         </Layout>
     );
