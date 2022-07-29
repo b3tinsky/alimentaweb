@@ -49,7 +49,7 @@ function ProgramasCard({ id, title, description, images }) {
                             {description.map((item, index) => (
                                 <li
                                     key={`${id}-${index}-description`}
-                                    className={`${styles.textPoints} lead`}>
+                                    className={`lead`}>
                                     {item}
                                 </li>
                             ))}
