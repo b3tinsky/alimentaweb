@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 import Head from "../components/head";
-import { Card, Image } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faInstagramSquare,
@@ -70,9 +70,11 @@ function Contacto() {
                         <strong>Contáctanos por Messenger</strong>
                         <div className={contactStyles.linksBox}>
                             <a
-                                href="http://m.me/esperanzaaldebil"
+                                href="http://m.me/comedormensajerodepaz"
                                 target="_blank"
-                                rel="noreferrer">
+                                rel="noreferrer"
+                                width="46px"
+                                height="46px">
                                 <FontAwesomeIcon
                                     icon={faFacebookMessenger}
                                     size="4x"
@@ -80,11 +82,11 @@ function Contacto() {
                                 />
                             </a>
                             <a
-                                href="http://m.me/esperanzaaldebil"
+                                href="http://m.me/comedormensajerodepaz"
                                 target="_blank"
                                 rel="noreferrer"
                                 className={contactStyles.links}>
-                                https://m.me/esperanzaaldebil
+                                https://m.me/comedormensajerodepaz
                             </a>
                         </div>
 
@@ -128,16 +130,17 @@ function Contacto() {
                             </a>
                         </div>
                     </Card>
-                    <iframe
-                        title="Ubicación en Google Maps"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.368805710248!2d-100.36691358497978!3d25.725314583653265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866297b8123fb51b%3A0x2cab3c0a0dc0fece!2sComedor%20Infantil%20Mensajero%20de%20Paz!5e0!3m2!1ses-419!2smx!4v1611898702545!5m2!1ses-419!2smx"
-                        width="550"
-                        height="450"
-                        frameBorder="0"
-                        allowFullScreen=""
-                        aria-hidden="false"
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    <div className={contactStyles.mapBox}>
+                        <iframe
+                            className={contactStyles.mapGoogle}
+                            title="Ubicación en Google Maps"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.368805710248!2d-100.36691358497978!3d25.725314583653265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866297b8123fb51b%3A0x2cab3c0a0dc0fece!2sComedor%20Infantil%20Mensajero%20de%20Paz!5e0!3m2!1ses-419!2smx!4v1611898702545!5m2!1ses-419!2smx"
+                            frameBorder="0"
+                            allowFullScreen=""
+                            aria-hidden="false"
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
             </div>
         </Layout>

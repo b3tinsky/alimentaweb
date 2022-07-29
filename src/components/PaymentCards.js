@@ -7,15 +7,28 @@ import {
     faCreditCard,
     faStore,
     faMoneyBill,
+    faHome,
 } from "@fortawesome/free-solid-svg-icons";
 
-function PaymentCards(page) {
-    const cardClassName = `${paymentStyles.paymentOption} ${
-        page.page === "comoAyudar" ? paymentStyles.paymentOptionAlt : ""
-    }`;
+function PaymentCards() {
     return (
         <div className={paymentStyles.paymentCards}>
-            <Card className={cardClassName}>
+            <Card className={paymentStyles.paymentOption}>
+                <FontAwesomeIcon
+                    icon={faHome}
+                    className={paymentStyles.imageIcon}
+                    size="3x"
+                />
+                <Card.Body className={paymentStyles.cardBody}>
+                    <Card.Title className={paymentStyles.cardText}>
+                        Donaciones en especie
+                    </Card.Title>
+                    <Card.Text className={paymentStyles.cardText}>
+                        Poner Direccion
+                    </Card.Text>
+                </Card.Body>
+            </Card>
+            <Card className={paymentStyles.paymentOption}>
                 <FontAwesomeIcon
                     icon={faCreditCard}
                     className={paymentStyles.imageIcon}
@@ -30,7 +43,7 @@ function PaymentCards(page) {
                     </Card.Text>
                 </Card.Body>
             </Card>
-            <Card className={cardClassName}>
+            <Card className={paymentStyles.paymentOption}>
                 <FontAwesomeIcon
                     icon={faMoneyBill}
                     className={paymentStyles.imageIcon}
@@ -48,7 +61,7 @@ function PaymentCards(page) {
                 </Card.Body>
             </Card>
 
-            <Card className={cardClassName}>
+            <Card className={paymentStyles.paymentOption}>
                 <FontAwesomeIcon
                     icon={faStore}
                     className={paymentStyles.imageIcon}
@@ -66,7 +79,7 @@ function PaymentCards(page) {
                 </Card.Body>
             </Card>
 
-            <Card className={cardClassName}>
+            <Card className={paymentStyles.paymentOption}>
                 <FontAwesomeIcon
                     icon={faPaypal}
                     className={paymentStyles.imageIcon}
@@ -86,7 +99,7 @@ function PaymentCards(page) {
                     </Card.Link>
                 </Card.Body>
             </Card>
-            <Card className={cardClassName}>
+            <Card className={paymentStyles.paymentOption}>
                 <Card.Img
                     className={paymentStyles.moneypoolIcon}
                     variant="top"
