@@ -10,13 +10,13 @@ function SobreNosotros() {
         {
             title: "Misión",
             body: [
-                "Implementar programas de desarrollo social y emocional en la niñez, mejorando la calidad de vida de los niños, combatiendo el hambre y a su vez, promoviendo y fortaleciendo los valores, la inclusión y la unidad familiar en todos los tejidos sociales.",
+                "Mejorar la calidad de vida de los niños con limitadas oportunidades, combatiendo el hambre, fortaleciendo su educación y promoviendo los valores, la inclusión y la unidad familiar.",
             ],
         },
         {
             title: "Visión",
             body: [
-                "Lograr una niñez plena y feliz a través de la integración familiar, el desarrollo y fortalecimiento de las capacidades de cada niño, proveyendo herramientas necesarias para enfrentar el futuro de manera exitosa.",
+                "Lograr una niñez plena y feliz a través de la integración familiar, el desarrollo y fortalecimiento de las capacidades de cada niño y cada niña, proveyendo herramientas necesarias para enfrentar el futuro de manera exitosa.",
                 // "Valores: Respeto, Honestidad, Paz, Responsabilidad, Compromiso, Solidaridad, Compasión, Empatía y Amor."
             ],
         },

@@ -14,32 +14,37 @@ function Comedores() {
             description:
                 "Ofrecemos apoyo alimentario a niños, madres de familia y abuelitos, con el fin de complementar su plan nutricional familiar. También ofrecemos talleres formativos y de fomento educativo por proyecto. En este comedor se tiene un programa especial de atención a la primera infancia.",
             images: ["comedores/1c1", "comedores/1c1", "comedores/1c1"],
-            kids: 60,
-            adultos: 45,
-            abuelitos: 10,
-            discapacitados: 3,
         },
         {
             id: 1,
-            title: "Col. Felipe Ángeles",
+            title: "Col. Santa Cecilia",
             description:
                 "Ofrecemos talleres formativos, culturales, de fomento educativo y se otorgan alimentos nutritivos esenciales, especialmente para niños. Este comedor, tiene el fin de reducir a los niños en situación de calle y aumentar sus conocimientos y valores morales, para un desarrollo integral en la niñez.",
             images: ["comedores/2c1", "comedores/2c1", "comedores/2c1"],
-            kids: 55,
-            adultos: 30,
-            abuelitos: 8,
-            discapacitados: 2,
         },
         {
             id: 2,
-            title: "Col. Garza Nieto",
+            title: "Col. Garza Nieto (Apoyo alimentario)",
             description:
                 "Ofrecemos apoyo escolar a niños con algún tipo de rezago, a su vez, otorgamos apoyo en su alimentación básica para niños, madres de familia, abuelitos y a algunos migrantes de la zona.",
             images: ["comedores/3c1", "comedores/3c1", "comedores/3c1"],
-            kids: 72,
-            adultos: 54,
-            abuelitos: 10,
-            discapacitados: 2,
+
+        },
+        {
+            id: 3,
+            title: "Juárez Nuevo León", 
+            description:
+                "Ofrecemos apoyo alimentario a niños, madres de familia y abuelitos, con el fin de complementar su plan nutricional familiar. También ofrecemos talleres formativos y de fomento educativo por proyecto. En este comedor se tiene un programa especial de atención a la primera infancia.",
+            images: ["comedores/3c1", "comedores/3c1", "comedores/3c1"], // actualizar imagenes
+
+        },
+        {
+            id: 4,
+            title: "Cienega de Flores (Apoyo alimentario)",
+            description:
+                "Ofrecemos apoyo escolar a niños con algún tipo de rezago, a su vez, otorgamos apoyo en su alimentación básica para niños, madres de familia, abuelitos y a algunos migrantes de la zona.",
+            images: ["comedores/3c1", "comedores/3c1", "comedores/3c1"],
+
         },
     ];
 
@@ -60,10 +65,6 @@ function Comedores() {
                             title={comedor.title}
                             description={comedor.description}
                             images={comedor.images}
-                            kids={comedor.kids}
-                            adultos={comedor.adultos}
-                            abuelitos={comedor.abuelitos}
-                            discapacitados={comedor.discapacitados}
                         />
                     ))}
                     <img

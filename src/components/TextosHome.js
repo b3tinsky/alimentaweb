@@ -8,13 +8,8 @@ export const secciones = [
                 body: [
                     {
                         text:
-                            "Somos una Asociación Civil, con 5 años de experiencia, que tiene como principal actividad, atender a niños con el modelo de comedores infantiles.",
+                            "Somos una asociación civil dedicada desde 2015 a atender niños de escasos recursos a través del modelo de comedores infantiles, acercándoles oportunidades de nutrición y educación para favorecer su desarrollo integral infantil y en el futuro aportar a la sociedad hombres y mujeres de bien.",
                         id: 1,
-                    },
-                    {
-                        text:
-                            "Tenemos como objetivo ayudar a personas en situación vulnerable (niños y niñas, personas de la tercera edad, mujeres embarazadas, madres solteras) fortaleciendo los valores morales y espirituales de cada familia, así mismo complementar sus necesidades básicas como alimentación, vestido, educación, nutrición y prevención de la salud.",
-                        id: 2,
                     },
                 ],
             },
@@ -26,18 +21,18 @@ export const secciones = [
     },
     {
         id: 1,
-        title: "Apoyo durante la pandemia",
+        title: "En los ultimos 3 años hemos apoyado:",
         cards: [
             {
                 id: 1,
                 img: "despensaicono.png",
-                title: "+1,500",
+                title: "+4,000",
                 text: "Despensas Familiares",
             },
             {
                 id: 2,
                 img: "appleicon.png",
-                title: "+4,500",
+                title: "+8,000",
                 text: "Apoyos Alimentarios",
             },
             {
@@ -49,21 +44,19 @@ export const secciones = [
             {
                 id: 4,
                 img: "peopleicon.png",
-                title: "+6,000",
+                title: "+20,000",
                 text: "Personas Beneficiadas",
             },
         ],
     },
     {
         id: 2,
-        title: "5 Años De Experiencia",
+        title: "7 Años De Experiencia",
         cards: [
             {
                 id: 1,
-                titleN: 422,
+                titleN: 511,
                 title: "Beneficiarios",
-                body:
-                    "Actualmente apoyamos a 157 adultos, 232 niños y adolescentes, 46 personas de la tercera edad, 7 discapacitados y contando…",
             },
             {
                 id: 2,
@@ -78,6 +71,13 @@ export const secciones = [
                 title: "Apoyos Alimentarios",
                 body:
                     "Otorgamos apoyos alimentarios semanales a primera infancia, familias y población de la 3era edad, que se encuentren en situaciones económicas severas.",
+            },
+            {
+                id: 4,
+                titleN: 1,
+                title: "Jardin de niños apadrinados",
+                body:
+                    "El jardin de niños ferrocarrileras esta implementando el proyecto alimnenta corazones de primera infancia",
             },
         ],
     },

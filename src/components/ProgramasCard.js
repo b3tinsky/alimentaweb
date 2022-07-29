@@ -7,6 +7,8 @@ param @title  title of each "programa"
 param @description description of each "programa"
 param @images array of image paths (without image extension and "../")
 */
+
+// hacer que la descripcion aparezca en formato de lista
 function ProgramasCard({ id, title, description, images }) {
     return (
         <div className="col-12 col-md-6 col-lg-5 mx-auto mb-3 card">
@@ -51,7 +53,7 @@ function ProgramasCard({ id, title, description, images }) {
             </div>
             <div className="card-body">
                 <h5 className="card-title">{title}</h5>
-                <p className="card-text">{description}</p>
+                <p className="card-text">{description}</p> 
             </div>
         </div>
     );
