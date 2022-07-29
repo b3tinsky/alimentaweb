@@ -1,4 +1,7 @@
 import React from "react";
+import styles from "../styles/components/programasCard.module.scss";
+import { Carousel } from "react-bootstrap";
+import { useMediaQuery } from "react-responsive";
 
 /**
 Program Cards
@@ -10,51 +13,68 @@ param @images array of image paths (without image extension and "../")
 
 // hacer que la descripcion aparezca en formato de lista
 function ProgramasCard({ id, title, description, images }) {
-    return (
-        <div className="col-12 col-md-6 col-lg-5 mx-auto mb-3 card">
-            <div
-                id={`carousel-${id}`}
-                className="carousel slide card-img-top p-2"
-                data-ride="carousel">
-                <div className="carousel-inner mh-25">
-                    {images.map((image, index) => (
-                        <div
-                            className={`carousel-item ${
-                                index === 0 ? "active" : ""
-                            }`}>
+    const isMobile = useMediaQuery({
+        query: "(max-width: 768px)",
+    });
+
+    const ProgramasCarousel = () => {
+        return (
+            <>
+                <Carousel
+                    controls={false}
+                    indicators={false}
+                    slide={false}
+                    className={styles.carouselContainer}>
+                    {images.map((image) => (
+                        <Carousel.Item key={`${id}-${image}`}>
                             <img
-                                className="d-block w-100"
-                                src={require("../images/" + image + ".jpg")}
+                                className={styles.carouselImg}
+                                src={require(`../images/${image}.jpg`)}
                                 alt=""
                             />
-                        </div>
+                        </Carousel.Item>
                     ))}
+                </Carousel>
+            </>
+        );
+    };
+
+    const DescriptionList = () => {
+        return (
+            <>
+                <div className={`${styles.cardText}`}>
+                    <h3 className={styles.cardTitle}>{title}</h3>
+                    <div className="">
+                        <ul>
+                            {description.map((item, index) => (
+                                <li
+                                    key={`${id}-${index}-description`}
+                                    className={`${styles.textPoints} lead`}>
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
-                <a
-                    className="carousel-control-prev"
-                    href={`#carousel-${id}`}
-                    role="button"
-                    data-slide="prev">
-                    <span
-                        className="carousel-control-prev-icon"
-                        aria-hidden="true"></span>
-                    <span className="sr-only">Previous</span>
-                </a>
-                <a
-                    className="carousel-control-next"
-                    href={`#carousel-${id}`}
-                    role="button"
-                    data-slide="next">
-                    <span
-                        className="carousel-control-next-icon"
-                        aria-hidden="true"></span>
-                    <span className="sr-only">Next</span>
-                </a>
-            </div>
-            <div className="card-body">
-                <h5 className="card-title">{title}</h5>
-                <p className="card-text">{description}</p> 
-            </div>
+            </>
+        );
+    };
+
+    return (
+        <div className={styles.cards}>
+            {id % 2 === 0 ? (
+                <>
+                    <DescriptionList /> <ProgramasCarousel />
+                </>
+            ) : isMobile ? (
+                <>
+                    <DescriptionList /> <ProgramasCarousel />
+                </>
+            ) : (
+                <>
+                    <ProgramasCarousel /> <DescriptionList />
+                </>
+            )}
         </div>
     );
 }

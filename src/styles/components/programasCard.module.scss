@@ -1,0 +1,38 @@
+@use '../colors.module.scss';
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    .carouselContainer {
+        .carouselImg {
+            height: 350px;
+        }
+    }
+
+    .cardText {
+        width: 45%;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+        .cardTitle {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: colors.$blue;
+        }
+
+        .textPoints {
+            margin-bottom: 1rem;
+        }
+    }
+}

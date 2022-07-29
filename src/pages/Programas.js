@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 import Head from "../components/head";
 import ProgramasCard from "../components/ProgramasCard";
+import styles from "../styles/pages/Programas.module.scss";
 
 function Programas() {
     /**
@@ -11,11 +12,11 @@ function Programas() {
         {
             id: 0,
             title: "Atención a la primera infancia 0 - 5 años",
-            description:[ // hacer que la descripcion aparezca en formato de lista
+            description: [
                 "Favorecer el desarrollo integral de niños y niñas menores de 5 años \n",
                 "Acompañamiento nutricional a las mamás durante los primeros 1000 días de vida\n",
                 "Propiciar las condiciones que favorezcan el buen estado de salud y nutricion en sus primeros años de vida\n",
-                "Desarrollo de habilidades y estimulación temprana en niñas y niños menores de 6 años\n"
+                "Desarrollo de habilidades y estimulación temprana en niñas y niños menores de 6 años\n",
             ],
 
             images: [
@@ -32,10 +33,10 @@ function Programas() {
         },
         {
             id: 1,
-            title: "Atencion integral a niños y niñas en edad escolar 6-11 años",
+            title:
+                "Atencion integral a niños y niñas en edad escolar 6-11 años",
 
-            description:
-            [ // hacer que la descripcion aparezca en formato de lista
+            description: [
                 "Desarrollo de habilidades sociales promoviendo el respeto y la honestidad en su entorno.",
                 "Impulsamos la sana alimentación como un derecho que todo niño y niña merece, teniendo acceso a una alimentación balanceada.",
                 "Fomentamos los aprendizajes fundamentales para la vida, apoyándoles con lo necesario para una educación de calidad.",
@@ -53,18 +54,16 @@ function Programas() {
             ],
         },
         {
-
             id: 2,
             title: "Acompañamiento para padres y madres de familia",
 
-            description: 
-            [
+            description: [
                 "Promovemos la participacion de los padres de familia en todo lo relacionado con el desarrollo y la educacion de sus hijos",
                 "Talleres para el desarrollo de habilidades para la vida y el trabajo",
                 "Asesoria y acompañamiento a madrea de familia víctimas de violencia",
                 "Ofrecemos ciclos de conferencias sobre temas de interes y promoción de sus derechos y responsabilidadades",
             ],
-            // MODIFICAR IMAGENES 
+            // MODIFICAR IMAGENES
             images: [
                 "programas/2p1",
                 "programas/2p2",
@@ -84,27 +83,21 @@ function Programas() {
      */
     const campaigns = [
         {
-            id: 3,
+            id: 1,
             title:
                 "Colecta de juguetes y patrocinadores para festejos del día del niño y navidad",
-            description:
-                "",
             images: ["programas/3p1", "programas/3p2", "programas/3p3"],
         },
         {
-            id: 4,
+            id: 2,
             title:
                 "Colecta de útiles escolares y materiales de apoyo para las asesorías que damos en los comedores",
-            description:
-                "",
             images: ["programas/4p1", "programas/4p2", "programas/4p3"],
         },
         {
-            id: 5,
+            id: 3,
             title:
                 "Colecta permanente de alimento no perecedero y de la canasta básica",
-            description:
-                "",
             images: ["programas/5p1", "programas/5p2", "programas/5p3"],
         },
     ];
@@ -122,9 +115,10 @@ function Programas() {
                     distintos programas, proyectos y campañas, logrando enfocar
                     nuestros esfuerzos y apoyo a quienes más lo necesitan.
                 </p>
-                <div class="row justify-content-center">
+                <div className={styles.cardContainer}>
                     {programas.map((programa) => (
                         <ProgramasCard
+                            key={`programa-${programa.id}`}
                             id={programa.id}
                             title={programa.title}
                             description={programa.description}
@@ -139,12 +133,13 @@ function Programas() {
                     mensuales, que se sumen a la causa, para ayudar a que
                     nuestros programas se sigan implementando.
                 </p>
-                <div class="row justify-content-center">
+                <div className="col justify-content-center">
                     {campaigns.map((campaign) => (
                         <ProgramasCard
+                            key={`campaign-${campaign.id}`}
                             id={campaign.id}
                             title={campaign.title}
-                            description={campaign.description}
+                            description={[]}
                             images={campaign.images}
                         />
                     ))}
