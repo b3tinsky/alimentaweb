@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "./layout";
 import Head from "./head";
-import PaymentCards from "./PaymentCards";
 import { Link } from "gatsby";
 import {
     Card,
@@ -122,7 +121,7 @@ function Home() {
                                             {card.titleN}
                                         </p>
                                         <p className={homeStyles.cardTitle}>
-                                            {card.title }
+                                            {card.title}
                                         </p>
                                     </Card.Title>
                                     <p

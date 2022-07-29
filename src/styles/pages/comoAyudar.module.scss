@@ -9,3 +9,13 @@
         border-radius: 1rem !important;
     }
 }
+
+.imgs {
+    width: 45%;
+}
+
+@media (max-width: 576px) {
+    .imgs {
+        width: 75%;
+    }
+}
