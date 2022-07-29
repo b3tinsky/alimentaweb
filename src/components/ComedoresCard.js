@@ -17,10 +17,6 @@ function ComedoresCard({
     title,
     description,
     images,
-    kids,
-    adultos,
-    abuelitos,
-    discapacitados,
 }) {
     return (
         <div className="col-12 col-md-6 col-lg-5 mx-auto mb-3 card">
@@ -67,24 +63,6 @@ function ComedoresCard({
                 <h5 className="card-title">{title}</h5>
                 <p className="card-text">{description}</p>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                    <b>Niños y Adolescentes: </b>
-                    {kids}
-                </li>
-                <li class="list-group-item">
-                    <b>Adultos: </b>
-                    {adultos}
-                </li>
-                <li class="list-group-item">
-                    <b>Abuelitos:</b>
-                    {abuelitos}
-                </li>
-                <li class="list-group-item">
-                    <b>Discapacitados: </b>
-                    {discapacitados}
-                </li>
-            </ul>
         </div>
     );
 }

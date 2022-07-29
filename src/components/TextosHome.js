@@ -72,6 +72,13 @@ export const secciones = [
                 body:
                     "Otorgamos apoyos alimentarios semanales a primera infancia, familias y población de la 3era edad, que se encuentren en situaciones económicas severas.",
             },
+            {
+                id: 4,
+                titleN: 1,
+                title: "Jardin de niños apadrinados",
+                body:
+                    "El jardin de niños ferrocarrileras esta implementando el proyecto alimnenta corazones de primera infancia",
+            },
         ],
     },
 ];
