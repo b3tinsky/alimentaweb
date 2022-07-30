@@ -3,7 +3,7 @@ import React from "react";
 import Layout from "../components/layout";
 import Head from "../components/head";
 import PaymentCards from "../components/PaymentCards";
-import styles from "../styles/pages/ComoAyudar.module.scss";
+import styles from "../styles/pages/comoAyudar.module.scss";
 
 function ComoAyudar() {
     /**
