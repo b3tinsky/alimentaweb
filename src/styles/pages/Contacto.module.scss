@@ -1,7 +1,72 @@
-.socialIcon {
-    margin: 0 0 0 20px;
-    color:rgb(2, 117, 216);
-    &:hover {
-        color:  rgb(35, 152, 255);
+@use '../colors.module.scss';
+.contactComplete {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    width: 100%;
+
+    .contactBox {
+        border: none !important;
+        width: 100%;
+
+        .linksBox {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .socialIcon {
+                margin: 0;
+                padding: 5px;
+                color: colors.$blue;
+                width: 56px;
+                height: 56px;
+                &:hover {
+                    color: colors.$blue-clear;
+                }
+            }
+
+            .links {
+                font-size: 0.9rem;
+            }
+        }
+    }
+    .mapBox {
+        width: 100%;
+
+        .mapGoogle {
+            height: 450px;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .contactComplete {
+        .contactBox {
+            .linksBox {
+                .links {
+                    width: 100%;
+                }
+            }
+        }
+        .mapBox {
+            .mapGoogle {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .contactComplete {
+        flex-direction: column;
+        .contactBox {
+            margin-bottom: 30px;
+            .links {
+                width: 80%;
+            }
+        }
+        .mapGoogle {
+            width: 100%;
+        }
     }
 }

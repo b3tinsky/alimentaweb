@@ -1,69 +1,56 @@
-import React, { Component } from "react"
-import { Link } from "gatsby"
+import React from "react";
 import navStyles from "../styles/components/navbar.module.scss";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-class Navbar extends Component {
-  state = {
-    scrolled: false,
-    open: true
-  }
+import { Navbar, Nav } from "react-bootstrap";
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.navOnScroll)
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.navOnScroll)
-  }
-
-  navOnScroll = () => {
-    if (window.scrollY > 20) {
-      this.setState({ scrolled: true })
-    } else {
-      this.setState({ scrolled: false })
-    }
-  }
-  
-  handleClick = () => {
-    if (this.state.open === true) {
-      this.setState({ open: false })
-    } else {
-      this.setState({ open: true })
-    }
-  }
-  render() {
-    const { scrolled } = this.state
-    const { open } = this.state
+function navbar() {
     return (
-      <nav className={scrolled ? navStyles.black : navStyles.transparent}>
-          <div className={navStyles.menuIcon}>
-            
-          <FontAwesomeIcon icon={faBars} onClick={this.handleClick}/>
-          </div>
-          <Link className={navStyles.logo} to="/">Esperanza al Débil</Link>
-          <ul className={open ? navStyles.showing : ""}>
-            <li>
-              <Link className={navStyles.listLink} to="/SobreNosotros">Sobre Nosotros</Link>
-            </li>
-            <li>
-              <Link className={navStyles.listLink} to="/Programas">Programas</Link>
-            </li>
-            <li>
-              <Link className={navStyles.listLink} to="/Comedores">Comedores</Link>
-            </li>
-            <li>
-              <Link className={navStyles.listLink} to="/ComoAyudar">Cómo Ayudar</Link>
-            </li>
-            <li>
-              <Link className={navStyles.listLink} to="/Galeria">Galeria</Link>
-            </li>
-            <li>
-              <Link className={navStyles.listLink} to="/Contacto">Contacto</Link>
-            </li>
-          </ul>
-      </nav>
-    )
-  }
+        <Navbar
+            className={navStyles.navbar}
+            variant="dark"
+            expand="lg"
+            fixed="top">
+            <Navbar.Brand href="/">
+                <img
+                    alt=""
+                    src={require("../images/home/logo-esperanza-al-debil.png")}
+                    width="30"
+                    height="30"
+                    className="d-inline-block align-top"
+                />{" "}
+                Esperanza al Débil
+            </Navbar.Brand>
+            <Navbar.Toggle
+                className={navStyles.navLink}
+                aria-controls="basic-navbar-nav"
+            />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="ml-auto">
+                    <Nav.Link className={navStyles.navLink} href="/">
+                        Inicio
+                    </Nav.Link>
+                    <Nav.Link
+                        className={navStyles.navLink}
+                        href="/SobreNosotros">
+                        Sobre Nosotros
+                    </Nav.Link>
+                    <Nav.Link className={navStyles.navLink} href="/Programas">
+                        Programas
+                    </Nav.Link>
+                    <Nav.Link className={navStyles.navLink} href="/Comedores">
+                        Comedores
+                    </Nav.Link>
+                    <Nav.Link className={navStyles.navLink} href="/ComoAyudar">
+                        Cómo Ayudar
+                    </Nav.Link>
+                    <Nav.Link className={navStyles.navLink} href="/Galeria">
+                        Galeria
+                    </Nav.Link>
+                    <Nav.Link className={navStyles.navLink} href="/Contacto">
+                        Contacto
+                    </Nav.Link>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
+    );
 }
-export default Navbar;
+export default navbar;

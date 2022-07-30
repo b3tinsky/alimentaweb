@@ -1,12 +1,9 @@
-import * as React from "react"
-import Home from "../components/Home"
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "../components/Home";
 
-
-const IndexPage = () => {
-  return (
-      <Home></Home>
-  )
+function IndexPage() {
+    return <Home></Home>;
 }
 
-export default IndexPage
+export default IndexPage;
