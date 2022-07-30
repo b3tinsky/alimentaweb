@@ -14,7 +14,7 @@ export const secciones = [
                 ],
             },
             {
-                img: "nuggets-costco-gracias-17_crop.jpg",
+                img: "quienesSomos.jpeg",
                 body: [],
             },
         ],
@@ -77,7 +77,7 @@ export const secciones = [
                 titleN: 1,
                 title: "Jardin de niños apadrinados",
                 body:
-                    "El jardin de niños ferrocarrileras esta implementando el proyecto alimnenta corazones de primera infancia",
+                    "El jardin de niños ferrocarrilera esta implementando el proyecto alimenta corazones de primera infancia",
             },
         ],
     },

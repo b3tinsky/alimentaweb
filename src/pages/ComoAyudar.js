@@ -63,10 +63,13 @@ function ComoAyudar() {
                     Se un héroe a distancia. Apadrina una familia por $500 pesos
                     al mes. Dibuja una sonrisa en un niño. ¡Apóyanos!
                 </p>
+                <h4 style={{ textAlign: "center" }}>
+                    ¡Todos ellos te necesitan!
+                </h4>
                 <div className="row justify-content-center mb-2">
                     <img
                         className={styles.imgs}
-                        src={require("../images/comedores/0c0.png")}
+                        src={require("../images/comedores/0c0.jpg")}
                         alt="Ellos te necesitan"></img>
                 </div>
                 {/* <div className="row justify-content-center">

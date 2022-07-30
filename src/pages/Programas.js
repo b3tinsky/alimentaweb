@@ -19,17 +19,7 @@ function Programas() {
                 "Desarrollo de habilidades y estimulación temprana en niñas y niños menores de 6 años\n",
             ],
 
-            images: [
-                "programas/1p1",
-                "programas/1p2",
-                "programas/1p3",
-                "programas/1p4",
-                "programas/1p5",
-                "programas/1p6",
-                "programas/1p7",
-                "programas/1p8",
-                "programas/1p9",
-            ],
+            images: ["programas/1p1"],
         },
         {
             id: 1,
@@ -41,17 +31,7 @@ function Programas() {
                 "Impulsamos la sana alimentación como un derecho que todo niño y niña merece, teniendo acceso a una alimentación balanceada.",
                 "Fomentamos los aprendizajes fundamentales para la vida, apoyándoles con lo necesario para una educación de calidad.",
             ],
-            images: [
-                "programas/2p1",
-                "programas/2p2",
-                "programas/2p3",
-                "programas/2p4",
-                "programas/2p5",
-                "programas/2p6",
-                "programas/2p7",
-                "programas/2p8",
-                "programas/2p9",
-            ],
+            images: ["programas/2p1"],
         },
         {
             id: 2,
@@ -64,17 +44,7 @@ function Programas() {
                 "Ofrecemos ciclos de conferencias sobre temas de interes y promoción de sus derechos y responsabilidadades",
             ],
             // MODIFICAR IMAGENES
-            images: [
-                "programas/2p1",
-                "programas/2p2",
-                "programas/2p3",
-                "programas/2p4",
-                "programas/2p5",
-                "programas/2p6",
-                "programas/2p7",
-                "programas/2p8",
-                "programas/2p9",
-            ],
+            images: ["programas/3p1"],
         },
     ];
 
@@ -86,13 +56,13 @@ function Programas() {
             id: 1,
             title:
                 "Colecta de juguetes y patrocinadores para festejos del día del niño y navidad",
-            images: ["programas/3p1", "programas/3p2", "programas/3p3"],
+            images: ["programas/3p2"],
         },
         {
             id: 2,
             title:
                 "Colecta de útiles escolares y materiales de apoyo para las asesorías que damos en los comedores",
-            images: ["programas/4p1", "programas/4p2", "programas/4p3"],
+            images: ["programas/4p1"],
         },
         {
             id: 3,

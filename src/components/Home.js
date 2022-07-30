@@ -78,6 +78,7 @@ function Home() {
                         <Card className="col-8 mx-10 col-lg-5 col-xl-4 mx-lg-auto border-0">
                             <Card.Img
                                 src={require(`../images/home/${secciones[0].cards[1].img}`)}
+                                style={{ height: "400px" }}
                             />
                         </Card>
                     </div>

@@ -12,19 +12,21 @@ function SobreNosotros() {
             body: [
                 "Mejorar la calidad de vida de los niños con limitadas oportunidades, combatiendo el hambre, fortaleciendo su educación y promoviendo los valores, la inclusión y la unidad familiar.",
             ],
+            img: ["sobreNosotros/1QS"],
         },
         {
             title: "Visión",
             body: [
                 "Lograr una niñez plena y feliz a través de la integración familiar, el desarrollo y fortalecimiento de las capacidades de cada niño y cada niña, proveyendo herramientas necesarias para enfrentar el futuro de manera exitosa.",
-                // "Valores: Respeto, Honestidad, Paz, Responsabilidad, Compromiso, Solidaridad, Compasión, Empatía y Amor."
             ],
+            img: ["sobreNosotros/2QS"],
         },
         {
             title: "Valores",
             body: [
                 "Creemos que el respeto y la honestidad son la columna vertebral para forjar la paz en nuestra sociedad, así mismo, con empatía, responsabilidad, compromiso y solidaridad se puede lograr que niños y jóvenes crezcan siendo hombres y mujeres de bien con amor hacia su prójimo replicando lo que ellos han aprendido.",
             ],
+            img: ["sobreNosotros/3QS"],
         },
     ];
 
@@ -60,10 +62,15 @@ function SobreNosotros() {
                                     {card.title}
                                 </Card.Title>
                                 {card.body.map((parrafo) => (
-                                    <Card.Text key={`${card.title}-1`}>
+                                    <Card.Text
+                                        key={`${card.title}-1`}
+                                        className={styles.cardText}>
                                         {parrafo}
                                     </Card.Text>
                                 ))}
+                                <Card.Img
+                                    src={require(`../images/${card.img}.jpeg`)}
+                                />
                             </Card.Body>
                         </Card>
                     ))}
