@@ -24,7 +24,9 @@ function PaymentCards() {
                         Donaciones en especie
                     </Card.Title>
                     <Card.Text className={paymentStyles.cardText}>
-                        Cesena 5311 Col. Santa Ceciclia <br />Monterrey Nuevo León <br />CP 64150
+                        Cesena 5311 Col. Santa Ceciclia <br />
+                        Monterrey Nuevo León <br />
+                        CP 64150
                     </Card.Text>
                 </Card.Body>
             </Card>
@@ -44,16 +46,17 @@ function PaymentCards() {
                 </Card.Body>
             </Card>
             <Card className={paymentStyles.paymentOption}>
-                <FontAwesomeIcon
-                    icon={faMoneyBill}
+                <img
+                    src={require("../images/Afirme_logo.png")}
                     className={paymentStyles.imageIcon}
-                    size="3x"
+                    style={{ width: "10rem" }}
                 />
                 <Card.Body className={paymentStyles.cardBody}>
                     <Card.Title className={paymentStyles.cardText}>
                         Cuenta Bancaria
                     </Card.Title>
                     <Card.Text className={paymentStyles.cardText}>
+                        <strong>Banco:</strong> Afirme <br />
                         <strong>Número de cuenta:</strong> 194119917 <br />
                         <strong>Clabe:</strong> 062580 001941 199171 <br />
                         <strong>Referencia:</strong> Alimenta una familia <br />
