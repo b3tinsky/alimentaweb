@@ -24,7 +24,7 @@ function PaymentCards() {
                         Donaciones en especie
                     </Card.Title>
                     <Card.Text className={paymentStyles.cardText}>
-                        Poner Direccion
+                        Cesena 5311 Col. Santa Ceciclia <br />Monterrey Nuevo León <br />CP 64150
                     </Card.Text>
                 </Card.Body>
             </Card>

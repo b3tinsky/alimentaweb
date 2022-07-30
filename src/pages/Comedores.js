@@ -35,14 +35,14 @@ function Comedores() {
             title: "Juárez Nuevo León",
             description:
                 "Ofrecemos apoyo alimentario a niños, madres de familia y abuelitos, con el fin de complementar su plan nutricional familiar. También ofrecemos talleres formativos y de fomento educativo por proyecto. En este comedor se tiene un programa especial de atención a la primera infancia.",
-            images: ["comedores/3c1"], // actualizar imagenes
+            images: ["comedores/4c1"], // actualizar imagenes
         },
         {
             id: 4,
             title: "Cienega de Flores (Apoyo alimentario)",
             description:
                 "Ofrecemos apoyo escolar a niños con algún tipo de rezago, a su vez, otorgamos apoyo en su alimentación básica para niños, madres de familia, abuelitos y a algunos migrantes de la zona.",
-            images: ["comedores/3c1"], // actualizar imagenes
+            images: ["comedores/5c1"], // actualizar imagenes
         },
     ];
 
